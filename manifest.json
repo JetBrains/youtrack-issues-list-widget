@@ -1,0 +1,19 @@
+{
+  "key": "youtrack-issues-list",
+  "version": "0.0.1",
+  "name": "Issues List",
+  "description": "Displays a list of YouTrack issues that match a search query.",
+  "applicationName": "YouTrack",
+  "author": "YouTrack Team",
+  "dependencies": {
+    "YouTrack": ">=2017.4.38723",
+    "Hub": ">3.0"
+  },
+  "products": {
+    "YouTrack": ">=2017.4.38723",
+    "Hub": ">3.0"
+  },
+  "capabilities": {
+    "topNavigation": true
+  }
+}
