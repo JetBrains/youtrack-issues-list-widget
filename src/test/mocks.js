@@ -1,5 +1,5 @@
-import chai from 'chai'
-import chaiEnzyme from 'chai-enzyme'
+import chai from 'chai';
+import chaiEnzyme from 'chai-enzyme';
 import spies from 'chai-spies';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

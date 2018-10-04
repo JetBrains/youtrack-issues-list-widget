@@ -4,10 +4,9 @@ import React from 'react';
 
 import IssuesListWidget from '../app/issues-list-widget';
 
-const {
-  getDashboardApiMock,
-  getRegisterWidgetApiMock
-} = require('./mocks');
+import {
+  getDashboardApiMock, getRegisterWidgetApiMock
+} from './mocks';
 
 describe('IssuesListWidget', () => {
 
