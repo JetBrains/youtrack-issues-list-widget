@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-10-03 18:31\n"
+"PO-Revision-Date: 2018-10-04 13:48\n"
 
 #: src/app/issues-list-widget.js:291
 msgid "Can't load information from service."
@@ -64,7 +64,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "エラー！不明なエラーが発生しました…"
 
 #: src/app/issues-list-edit-form.js:312
 msgid "Projects"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "ウィジェットは{{minutesCount}}分ごとに更新されます"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: src/app/issues-list-widget.js:52
 msgid "issues"
-msgstr ""
+msgstr "課題"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
