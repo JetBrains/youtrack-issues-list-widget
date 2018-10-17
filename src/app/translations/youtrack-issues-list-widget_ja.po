@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-10-08 21:03\n"
+"PO-Revision-Date: 2018-10-17 12:22\n"
 
-#: src/app/issues-list-widget.js:291
+#: src/app/issues-list-widget.js:322
 msgid "Can't load information from service."
 msgstr ""
 
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: src/app/issues-list-widget.js:281
+#: src/app/issues-list-widget.js:312
 msgid "Edit search query"
 msgstr ""
 
@@ -38,15 +38,15 @@ msgstr ""
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr ""
 
-#: src/app/issues-list-widget.js:396
+#: src/app/issues-list-widget.js:427
 msgid "Load one more issue"
 msgstr ""
 
-#: src/app/issues-list-widget.js:397
+#: src/app/issues-list-widget.js:428
 msgid "Load {{loadMoreCount}} more issues"
 msgstr ""
 
-#: src/app/issues-list-widget.js:275
+#: src/app/issues-list-widget.js:306
 msgid "No issues found"
 msgstr ""
 

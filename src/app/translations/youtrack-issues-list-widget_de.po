@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-08 21:03\n"
+"PO-Revision-Date: 2018-10-17 12:22\n"
 
-#: src/app/issues-list-widget.js:291
+#: src/app/issues-list-widget.js:322
 msgid "Can't load information from service."
 msgstr "Daten aus Service können nicht geladen werden."
 
@@ -21,7 +21,7 @@ msgstr "Daten aus Service können nicht geladen werden."
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/app/issues-list-widget.js:281
+#: src/app/issues-list-widget.js:312
 msgid "Edit search query"
 msgstr "Suchanfrage bearbeiten"
 
@@ -38,15 +38,15 @@ msgstr "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|Novemb
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Jan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez"
 
-#: src/app/issues-list-widget.js:396
+#: src/app/issues-list-widget.js:427
 msgid "Load one more issue"
 msgstr "Ein weiteres Ticket laden"
 
-#: src/app/issues-list-widget.js:397
+#: src/app/issues-list-widget.js:428
 msgid "Load {{loadMoreCount}} more issues"
 msgstr "{{loadMoreCount}} weitere Tickets laden"
 
-#: src/app/issues-list-widget.js:275
+#: src/app/issues-list-widget.js:306
 msgid "No issues found"
 msgstr "Keine Tickets gefunden"
 
