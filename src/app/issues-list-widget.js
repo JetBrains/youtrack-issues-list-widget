@@ -65,6 +65,8 @@ class IssuesListWidget extends React.Component {
     }
   };
 
+  static youTrackServiceNeedsUpdate = service => !service.name;
+
   constructor(props) {
     super(props);
     const {registerWidgetApi} = props;
@@ -138,12 +140,41 @@ class IssuesListWidget extends React.Component {
   }
 
   setYouTrack(youTrackService, onAfterYouTrackSetFunction) {
+    const {homeUrl} = youTrackService;
+
     this.setState({
       youTrack: {
-        id: youTrackService.id,
-        homeUrl: youTrackService.homeUrl
+        id: youTrackService.id, homeUrl
       }
     }, async () => await onAfterYouTrackSetFunction());
+
+    if (IssuesListWidget.youTrackServiceNeedsUpdate(youTrackService)) {
+      const {dashboardApi} = this.props;
+      ServiceResource.getYouTrackService(
+        dashboardApi.fetchHub.bind(dashboardApi),
+        youTrackService.id
+      ).then(
+        updatedYouTrackService => {
+          const shouldReSetYouTrack = updatedYouTrackService &&
+            !IssuesListWidget.youTrackServiceNeedsUpdate(
+              updatedYouTrackService
+            ) && updatedYouTrackService.homeUrl !== homeUrl;
+          if (shouldReSetYouTrack) {
+            this.setYouTrack(
+              updatedYouTrackService, onAfterYouTrackSetFunction
+            );
+            if (!this.state.isConfiguring) {
+              dashboardApi.storeConfig({
+                youTrack: {
+                  id: updatedYouTrackService.id,
+                  homeUrl: updatedYouTrackService.homeUrl
+                }
+              });
+            }
+          }
+        }
+      );
+    }
   }
 
   submitConfiguration = async formParameters => {
