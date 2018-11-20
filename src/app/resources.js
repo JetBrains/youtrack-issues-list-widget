@@ -6,6 +6,8 @@ const ISSUE_FIELDS = `id,idReadable,summary,resolved,fields(${ISSUE_FIELD_FIELDS
 const QUERY_ASSIST_FIELDS = 'query,caret,styleRanges(start,length,style),suggestions(options,prefix,option,suffix,description,matchingStart,matchingEnd,caret,completionStart,completionEnd,group,icon)';
 const WATCH_FOLDERS_FIELDS = 'id,$type,name,query,shortName';
 
+const DATE_PRESENTATION_SETTINGS = 'id,dateFieldFormat(pattern,datePattern)';
+
 export async function loadIssues(fetchYouTrack, query, context, skip) {
   const packSize = 50;
   const encodedQuery = encodeURIComponent(query);
@@ -42,6 +44,20 @@ export async function loadTotalIssuesCount(
 export async function loadPinnedIssueFolders(fetchYouTrack, loadAll) {
   const packSize = 100;
   return await fetchYouTrack(`api/userIssueFolders?fields=${WATCH_FOLDERS_FIELDS}&$top=${loadAll ? -1 : packSize}`);
+}
+
+export async function loadDateFormats(fetchYouTrack) {
+  const generalUserProfile = await fetchYouTrack(`api/admin/users/me/profiles/general?fields=${DATE_PRESENTATION_SETTINGS}`);
+  const dateFormats =
+    (generalUserProfile && generalUserProfile.dateFieldFormat) || {};
+  return {
+    datePattern: toFechaFormat(dateFormats.datePattern),
+    dateTimePattern: toFechaFormat(dateFormats.pattern)
+  };
+
+  function toFechaFormat(pattern) {
+    return (pattern || '').replace(/yy/g, 'YY').replace(/dd/g, 'DD').replace('aaa', 'A');
+  }
 }
 
 export async function underlineAndSuggest(fetchYouTrack, query, caret) {

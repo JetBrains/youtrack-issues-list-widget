@@ -15,7 +15,15 @@ class IssueLine extends React.Component {
   static propTypes = {
     issue: PropTypes.object,
     homeUrl: PropTypes.string,
-    expanded: PropTypes.bool
+    expanded: PropTypes.bool,
+    dateFormats: PropTypes.object
+  };
+
+  static defaultProps = {
+    dateFormats: {
+      datePattern: 'YYYY-MM-DD',
+      dateTimePattern: 'YYYY-MM-DD\'T\'HH:mm:ss'
+    }
   };
 
   static fieldColorToCss(color) {
@@ -43,22 +51,23 @@ class IssueLine extends React.Component {
     return field.localizedName || field.name;
   }
 
-  static getDatePresentation(timestamp, withTime) {
+  static getDatePresentation(timestamp, dateFormats, withTime) {
     return fecha.format(
       timestamp,
-      withTime ? 'dateAndTimePresentation' : 'datePresentation'
+      withTime ? dateFormats.dateTimePattern : dateFormats.datePattern
     );
   }
 
-  static getValuePresentation(issueField) {
+  static getValuePresentation(issueField, dateFromats) {
     const field = issueField.projectCustomField &&
       issueField.projectCustomField.field;
     const fieldType = (field && field.fieldType && field.fieldType.valueType) ||
       '';
     return IssueLine.toArray(issueField.value || []).map(value => {
       if (fieldType.indexOf('date') > -1) {
-        const withTime = fieldType.indexOf('time') > -1;
-        return IssueLine.getDatePresentation(value, withTime);
+        return IssueLine.getDatePresentation(
+          value, dateFromats, fieldType.indexOf('time') > -1
+        );
       }
       return IssueLine.getName(value) || value.presentation ||
         value.minutes || value.name || value.login || value;
@@ -146,7 +155,7 @@ class IssueLine extends React.Component {
 
     return (
       <div className="issues-list-widget__field-value">
-        {IssueLine.getValuePresentation(issueField)}
+        {IssueLine.getValuePresentation(issueField, this.props.dateFormats)}
         {
           firstValue.avatarUrl &&
           <img

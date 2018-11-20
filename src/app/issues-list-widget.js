@@ -6,7 +6,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 
 import ServiceResource from './components/service-resource';
-import {loadIssues, loadTotalIssuesCount} from './resources';
+import {loadDateFormats, loadIssues, loadTotalIssuesCount} from './resources';
 import IssuesListEditForm from './issues-list-edit-form';
 import IssueLine from './issue-line';
 
@@ -115,6 +115,10 @@ class IssuesListWidget extends React.Component {
         } else {
           this.changeTitle(title);
           await this.loadIssues(search, context);
+          const dateFormats = await loadDateFormats(
+            this.fetchYouTrack
+          );
+          this.setState({dateFormats});
         }
         this.setLoadingEnabled(false);
       };
@@ -385,7 +389,8 @@ class IssuesListWidget extends React.Component {
       issues,
       youTrack,
       expandedIssueId,
-      isNextPageLoading
+      isNextPageLoading,
+      dateFormats
     } = this.state;
     const homeUrl = youTrack ? youTrack.homeUrl : '';
     const loadMoreCount = this.getLoadMoreCount();
@@ -395,8 +400,8 @@ class IssuesListWidget extends React.Component {
         if (evt.target && evt.target.href) {
           return;
         }
-        const isAlreadyExpended = issueId === expandedIssueId;
-        this.setState({expandedIssueId: isAlreadyExpended ? null : issueId});
+        const isAlreadyExpanded = issueId === expandedIssueId;
+        this.setState({expandedIssueId: isAlreadyExpanded ? null : issueId});
       };
 
     return (
@@ -411,6 +416,7 @@ class IssuesListWidget extends React.Component {
                 issue={issue}
                 homeUrl={homeUrl}
                 expanded={expandedIssueId === issue.id}
+                dateFormats={dateFormats}
               />
             </div>
           ))
