@@ -224,10 +224,8 @@ class IssueLine extends React.Component {
       highlighted && 'issues-list-widget__issue_highlighted'
     );
 
-    const onOpenIssue = evt => {
-      window.open(`${homeUrl}/issue/${issue.idReadable}`, '_blank');
+    const onOpenIssue = evt =>
       evt.stopPropagation();
-    };
 
     return (
       <div
@@ -248,23 +246,24 @@ class IssueLine extends React.Component {
             </Tooltip>
           </span>
         }
-        <div className="issues-list-widget__issue-info">
+        <div
+          className="issues-list-widget__issue-info"
+          onClick={onOpenIssue}
+        >
           <Link
-            pseudo={true}
             className={
               getIssueLinkClassName('issues-list-widget__issue-id')
             }
-            onClick={onOpenIssue}
+            href={`${homeUrl}/issue/${issue.idReadable}`}
           >
             { issue.idReadable }
           </Link>
           <Link
             key={`issue-summary-${issue.id}`}
-            pseudo={true}
             className={
               getIssueLinkClassName('issues-list-widget__issue-summary')
             }
-            onClick={onOpenIssue}
+            href={`${homeUrl}/issue/${issue.idReadable}`}
           >
             { issue.summary }
           </Link>
