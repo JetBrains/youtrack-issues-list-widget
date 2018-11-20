@@ -224,6 +224,11 @@ class IssueLine extends React.Component {
       highlighted && 'issues-list-widget__issue_highlighted'
     );
 
+    const onOpenIssue = evt => {
+      window.open(`${homeUrl}/issue/${issue.idReadable}`, '_blank');
+      evt.stopPropagation();
+    };
+
     return (
       <div
         className={getIssueLineClassName()}
@@ -249,16 +254,17 @@ class IssueLine extends React.Component {
             className={
               getIssueLinkClassName('issues-list-widget__issue-id')
             }
-            href={`${homeUrl}/issue/${issue.idReadable}`}
+            onClick={onOpenIssue}
           >
             { issue.idReadable }
           </Link>
           <Link
             key={`issue-summary-${issue.id}`}
+            pseudo={true}
             className={
               getIssueLinkClassName('issues-list-widget__issue-summary')
             }
-            href={`${homeUrl}/issue/${issue.idReadable}`}
+            onClick={onOpenIssue}
           >
             { issue.summary }
           </Link>
