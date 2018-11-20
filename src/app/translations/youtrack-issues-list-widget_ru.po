@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-10-17 21:03\n"
+"PO-Revision-Date: 2018-11-20 17:07\n"
 
-#: src/app/issues-list-widget.js:322
+#: src/app/issues-list-widget.js:326
 msgid "Can't load information from service."
 msgstr "Не удается загрузить информацию от сервиса."
 
@@ -21,7 +21,7 @@ msgstr "Не удается загрузить информацию от сер�
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/issues-list-widget.js:312
+#: src/app/issues-list-widget.js:316
 msgid "Edit search query"
 msgstr "Редактировать поисковый запрос"
 
@@ -38,15 +38,15 @@ msgstr "январь|февраль|март|апрель|май|июнь|июл
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
 
-#: src/app/issues-list-widget.js:427
+#: src/app/issues-list-widget.js:433
 msgid "Load one more issue"
 msgstr "Загрузить еще одну задачу"
 
-#: src/app/issues-list-widget.js:428
+#: src/app/issues-list-widget.js:434
 msgid "Load {{loadMoreCount}} more issues"
 msgstr "Загрузить еще задачи ({{loadMoreCount}})"
 
-#: src/app/issues-list-widget.js:306
+#: src/app/issues-list-widget.js:310
 msgid "No issues found"
 msgstr "Задачи не найдены"
 
