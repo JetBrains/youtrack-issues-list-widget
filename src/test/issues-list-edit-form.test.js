@@ -49,7 +49,7 @@ describe('IssuesListEditForm', () => {
   it('should call cancel-callback on cancel', () => {
     const issueListEdiFormWrapper = mountIssueListEditForm();
     const cancelButton = issueListEdiFormWrapper.
-      find('Button[data-test="cancel-button"]');
+      find('button[data-test="cancel-button"]');
 
     (onCancel).should.not.be.called();
 
@@ -61,13 +61,13 @@ describe('IssuesListEditForm', () => {
 
   it('should respect localization', () => {
     let cancelButton = mountIssueListEditForm().
-      find('Button[data-test="cancel-button"]');
+      find('button[data-test="cancel-button"]');
 
     (cancelButton.text().trim()).should.be.equal('Cancel');
 
     setLocale('ru', TRANSLATIONS);
     cancelButton = mountIssueListEditForm().
-      find('Button[data-test="cancel-button"]');
+      find('button[data-test="cancel-button"]');
 
     (cancelButton.text().trim()).should.be.equal('Отмена');
   });
