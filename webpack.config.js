@@ -72,6 +72,7 @@ const webpackConfig = () => ({
     headers: {
       'Access-Control-Allow-Origin': '*'
     },
+    disableHostCheck: true,
     stats: {
       assets: false,
       children: false,
