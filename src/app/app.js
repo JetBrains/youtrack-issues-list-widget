@@ -1,5 +1,4 @@
 import 'babel-polyfill';
-import 'file-loader?name=[name].[ext]!../../manifest.json'; // eslint-disable-line import/no-unresolved
 import 'hub-dashboard-addons/dashboard.css';
 
 import React from 'react';
