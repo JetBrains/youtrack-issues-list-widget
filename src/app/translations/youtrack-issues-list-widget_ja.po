@@ -11,56 +11,56 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-11-20 17:07\n"
+"PO-Revision-Date: 2018-12-25 16:43\n"
 
 #: src/app/issues-list-widget.js:326
 msgid "Can't load information from service."
-msgstr ""
+msgstr "サービスから情報を読み込むことができません。"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
-msgstr ""
+msgstr "取り消す"
 
 #: src/app/issues-list-widget.js:316
 msgid "Edit search query"
-msgstr ""
+msgstr "検索クエリの編集"
 
 #: src/app/issues-list-edit-form.js:293
 #: src/app/issues-list-edit-form.js:45
 msgid "Everything"
-msgstr ""
+msgstr "すべて"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
 #: src/app/issues-list-widget.js:433
 msgid "Load one more issue"
-msgstr ""
+msgstr "もう1個課題を読み込む"
 
 #: src/app/issues-list-widget.js:434
 msgid "Load {{loadMoreCount}} more issues"
-msgstr ""
+msgstr "もう{{loadMoreCount}}個課題を読み込む"
 
 #: src/app/issues-list-widget.js:310
 msgid "No issues found"
-msgstr ""
+msgstr "課題が見つかりません"
 
 #: src/app/issues-list-edit-form.js:213
 msgid "No projects"
-msgstr ""
+msgstr "プロジェクトがありません"
 
 #: src/app/issues-list-edit-form.js:215
 msgid "No saved searches"
-msgstr ""
+msgstr "保存した検索はありません"
 
 #: src/app/issues-list-edit-form.js:214
 msgid "No tags"
-msgstr ""
+msgstr "タグなし"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
@@ -68,47 +68,47 @@ msgstr "エラー！不明なエラーが発生しました…"
 
 #: src/app/issues-list-edit-form.js:312
 msgid "Projects"
-msgstr ""
+msgstr "プロジェクト"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/app/issues-list-edit-form.js:324
 msgid "Saved searches"
-msgstr ""
+msgstr "保存した検索条件"
 
 #: src/app/issues-list-edit-form.js:393
 msgid "Select YouTrack"
-msgstr ""
+msgstr "YouTrackを選択"
 
 #: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
-msgstr ""
+msgstr "選択されたYouTrackサービスはご利用いただけません"
 
 #: src/app/issues-list-edit-form.js:380
 msgid "Set optional title"
-msgstr ""
+msgstr "タイトル（省略可）を設定"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "日|月|火|水|木|金|土"
 
 #: src/app/issues-list-edit-form.js:318
 msgid "Tags"
-msgstr ""
+msgstr "タグ"
 
 #: src/app/issues-list-edit-form.js:299
 msgid "Type search query"
-msgstr ""
+msgstr "検索クエリを入力"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "ウィジェットは1分ごとに更新されます"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
@@ -116,7 +116,7 @@ msgstr "ウィジェットは{{minutesCount}}分ごとに更新されます"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr ""
+msgstr "am|pm"
 
 #: src/app/issues-list-widget.js:52
 msgid "issues"
@@ -124,5 +124,5 @@ msgstr "課題"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} 分"
 
