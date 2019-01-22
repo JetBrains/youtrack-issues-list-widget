@@ -60,9 +60,9 @@ export async function loadDateFormats(fetchYouTrack) {
   }
 }
 
-export async function underlineAndSuggest(fetchYouTrack, query, caret) {
+export async function underlineAndSuggest(fetchYouTrack, query, caret, folder) {
   return await fetchYouTrack(`api/search/assist?fields=${QUERY_ASSIST_FIELDS}`, {
     method: 'POST',
-    body: {query, caret}
+    body: {query, caret, folder}
   });
 }

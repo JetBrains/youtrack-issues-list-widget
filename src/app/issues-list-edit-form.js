@@ -163,8 +163,8 @@ class IssuesListEditForm extends React.Component {
     return await dashboardApi.fetch(selectedYouTrack.id, url, params);
   };
 
-  underlineAndSuggest = async (query, caret) =>
-    await underlineAndSuggest(this.fetchYouTrack, query, caret);
+  underlineAndSuggest = async (query, caret, folder) =>
+    await underlineAndSuggest(this.fetchYouTrack, query, caret, folder);
 
   changeSearchContext = selected => this.setState({context: selected.model});
 
@@ -267,7 +267,7 @@ class IssuesListEditForm extends React.Component {
 
     const queryAssistDataSource = async queryAssistModel =>
       await this.underlineAndSuggest(
-        queryAssistModel.query, queryAssistModel.caret
+        queryAssistModel.query, queryAssistModel.caret, context
       );
 
     const toSelectItem = it => it && {key: it.id, label: it.name, model: it};
