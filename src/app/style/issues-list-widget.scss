@@ -1,6 +1,8 @@
 @import '~@jetbrains/ring-ui/components/global/global';
 
 .issues-list-widget {
+  color: var(--ring-text-color);
+
   &__issue {
     position: relative;
 
@@ -13,8 +15,8 @@
     line-height: 20px;
 
     &_expanded {
-      background-color: #fff;
-      box-shadow: 0 1px 4px rgba(0, 42, 76, 0.15);
+      background-color: var(--ring-content-background-color);
+      box-shadow: 0 1px 4px var(--ring-borders-color);
     }
   }
 
@@ -48,7 +50,7 @@
     border: 1px solid transparent;
     border-radius: 2px;
 
-    background-color: #f8f8f8;
+    background-color: var(--ring-sidebar-background-color);
 
     font-size: 10px;
 
@@ -68,7 +70,7 @@
 
     white-space: nowrap;
 
-    background-color: white;
+    background-color: var(--ring-content-background-color);
 
     .issues-list-widget__issue_highlighted & {
       display: inline-block;
@@ -88,7 +90,7 @@
   .issues-list-widget__issue-id.issues-list-widget__issue-id_resolved {
     text-decoration: line-through;
 
-    color: $ring-dark-gray-color;
+    color: var(--ring-secondary-color);
   }
 
   &__issue-summary {
@@ -96,7 +98,7 @@
   }
 
   .issues-list-widget__issue-summary.issues-list-widget__issue-summary_resolved {
-    color: $ring-dark-gray-color;
+    color: var(--ring-secondary-color);
   }
 
   &__fields {
@@ -109,7 +111,7 @@
 
     text-align: left;
 
-    font-size: $ring-font-size-smaller;
+    font-size: var(--ring-font-size-smaller);
   }
 
   &__field-row {
@@ -127,7 +129,7 @@
       padding-right: $ring-unit*2;
       padding-bottom: 2px;
 
-      color: $ring-dark-gray-color;
+      color: var(--ring-secondary-color);
     }
 
     &-value {
@@ -167,7 +169,7 @@
   &__no-filters {
     margin: $ring-unit 4px;
 
-    color: $ring-dark-gray-color;
+    color: var(--ring-secondary-color);
   }
 
   &__filters-list {
@@ -203,13 +205,13 @@
 
     text-align: center;
 
-    border: 1px dashed $ring-border-color;
+    border: 1px dashed var(--ring-borders-color);
     border-radius: 3px;
 
-    font-size: $ring-font-size-smaller;
+    font-size: var(--ring-font-size-smaller);
 
     &:hover {
-      border-color: $ring-pale-blue-color;
+      border-color: var(--ring-pale-control-color);
     }
   }
 }

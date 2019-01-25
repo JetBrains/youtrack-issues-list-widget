@@ -1,6 +1,6 @@
 {
   "key": "youtrack-issues-list",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "Issues List",
   "description": "Displays a list of YouTrack issues that match a search query.",
   "applicationName": "YouTrack",
