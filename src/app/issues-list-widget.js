@@ -13,10 +13,6 @@ import IssueLine from './issue-line';
 import './style/issues-list-widget.scss';
 
 class IssuesListWidget extends React.Component {
-  static propTypes = {
-    dashboardApi: PropTypes.object,
-    registerWidgetApi: PropTypes.func
-  };
 
   static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
 
@@ -66,6 +62,11 @@ class IssuesListWidget extends React.Component {
   };
 
   static youTrackServiceNeedsUpdate = service => !service.name;
+
+  static propTypes = {
+    dashboardApi: PropTypes.object,
+    registerWidgetApi: PropTypes.func
+  };
 
   constructor(props) {
     super(props);
@@ -281,6 +282,11 @@ class IssuesListWidget extends React.Component {
     );
   };
 
+  editSearchQuery = () => {
+    this.props.dashboardApi.enterConfigMode();
+    this.setState({isConfiguring: true});
+  };
+
   renderConfiguration() {
     return (
       <div className="issues-list-widget">
@@ -299,19 +305,14 @@ class IssuesListWidget extends React.Component {
   }
 
   renderNoIssuesError() {
-    const editSearchQuery = () => {
-      this.props.dashboardApi.enterConfigMode();
-      this.setState({isConfiguring: true});
-    };
-
     return (
       <EmptyWidget
         face={EmptyWidgetFaces.OK}
         message={i18n('No issues found')}
       >
         <Link
-          pseudo={true}
-          onClick={editSearchQuery}
+          pseudo
+          onClick={this.editSearchQuery}
         >
           {i18n('Edit search query')}
         </Link>
@@ -370,14 +371,16 @@ class IssuesListWidget extends React.Component {
     const issuesCount = issues.length
       ? await loadTotalIssuesCount(
         this.fetchYouTrack, issues[0], search, context
-      ) : 0;
+      )
+      : 0;
     this.changeIssuesCount(issuesCount);
   }
 
   getLoadMoreCount() {
     const {issuesCount, issues} = this.state;
-    return issues && issuesCount && issuesCount > issues.length
-      ? issuesCount - issues.length : 0;
+    return (issues && issuesCount && issuesCount > issues.length)
+      ? issuesCount - issues.length
+      : 0;
   }
 
   renderLoader() {
@@ -423,11 +426,12 @@ class IssuesListWidget extends React.Component {
         }
         {
           loadMoreCount > 0 && !isNextPageLoading &&
+        (
           <div
             onClick={this.loadNextPageOfIssues}
             className="issues-list-widget__load-more"
           >
-            <Link pseudo={true}>
+            <Link pseudo>
               {
                 loadMoreCount === 1
                   ? i18n('Load one more issue')
@@ -435,6 +439,7 @@ class IssuesListWidget extends React.Component {
               }
             </Link>
           </div>
+        )
         }
         {
           isNextPageLoading && <LoaderInline/>

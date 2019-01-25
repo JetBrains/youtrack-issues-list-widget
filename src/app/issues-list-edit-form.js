@@ -23,17 +23,6 @@ import './style/issues-list-widget.scss';
 const MIN_YOUTRACK_VERSION = '2017.4.38723';
 
 class IssuesListEditForm extends React.Component {
-  static propTypes = {
-    search: PropTypes.string,
-    context: PropTypes.object,
-    title: PropTypes.string,
-    refreshPeriod: PropTypes.number,
-    onSubmit: PropTypes.func,
-    onCancel: PropTypes.func,
-    dashboardApi: PropTypes.object,
-    youTrackId: PropTypes.string
-  };
-
   static FILTERS_TYPES = {
     PROJECTS: 0,
     TAGS: 1,
@@ -45,7 +34,16 @@ class IssuesListEditForm extends React.Component {
     label: i18n('Everything')
   };
 
-  static REFRESH_PERIOD_MINUTE = 60; // eslint-disable-line no-magic-numbers
+  static propTypes = {
+    search: PropTypes.string,
+    context: PropTypes.object,
+    title: PropTypes.string,
+    refreshPeriod: PropTypes.number,
+    onSubmit: PropTypes.func,
+    onCancel: PropTypes.func,
+    dashboardApi: PropTypes.object,
+    youTrackId: PropTypes.string
+  };
 
   constructor(props) {
     super(props);
@@ -166,6 +164,11 @@ class IssuesListEditForm extends React.Component {
   underlineAndSuggest = async (query, caret, folder) =>
     await underlineAndSuggest(this.fetchYouTrack, query, caret, folder);
 
+  queryAssistDataSource = async queryAssistModel =>
+    await this.underlineAndSuggest(
+      queryAssistModel.query, queryAssistModel.caret, this.state.context
+    );
+
   changeSearchContext = selected => this.setState({context: selected.model});
 
   loadAllContexts = async () => {
@@ -174,17 +177,24 @@ class IssuesListEditForm extends React.Component {
     this.setState({allContexts});
   };
 
-  renderFilterLink(filterType, filter) {
-    const appendToQuery = () => this.appendToSearch(filterType, filter);
+  onQueryAssistInputChange = queryAssistModel =>
+    this.changeSearch(queryAssistModel.query);
 
+  onChangeRefreshPeriod = newValue =>
+    this.setState({refreshPeriod: newValue});
+
+  getAppendToQueryCallback = (filterType, filter) =>
+    () => this.appendToSearch(filterType, filter);
+
+  renderFilterLink(filterType, filter) {
     return (
       <div
         key={`filter-${filter.id}`}
         className="issues-list-widget__filter"
       >
         <Link
-          pseudo={true}
-          onClick={appendToQuery}
+          pseudo
+          onClick={this.getAppendToQueryCallback(filterType, filter)}
         >
           {
             filter.shortName
@@ -226,9 +236,11 @@ class IssuesListEditForm extends React.Component {
         }
         {
           displayedFilters.length === 0 &&
+        (
           <span className="issues-list-widget__no-filters">
             {noFiltersMessages[filtersType]}
           </span>
+        )
         }
         {
           displayedFilters.length > 0 && displayedFilters.map(
@@ -265,15 +277,7 @@ class IssuesListEditForm extends React.Component {
       allContexts
     } = this.state;
 
-    const queryAssistDataSource = async queryAssistModel =>
-      await this.underlineAndSuggest(
-        queryAssistModel.query, queryAssistModel.caret, context
-      );
-
     const toSelectItem = it => it && {key: it.id, label: it.name, model: it};
-
-    const onQueryAssistChange = queryAssistModel =>
-      this.changeSearch(queryAssistModel.query);
 
     const contextOptions = (allContexts || []).map(toSelectItem);
     contextOptions.unshift(IssuesListEditForm.EVERYTHING_CONTEXT_OPTION);
@@ -288,7 +292,7 @@ class IssuesListEditForm extends React.Component {
             data={contextOptions}
             selected={toSelectItem(context)}
             onSelect={this.changeSearchContext}
-            filter={true}
+            filter
             loading={!allContexts}
             label={i18n('Everything')}
           />
@@ -297,8 +301,8 @@ class IssuesListEditForm extends React.Component {
               disabled={this.state.isLoading}
               query={search}
               placeholder={i18n('Type search query')}
-              onChange={onQueryAssistChange}
-              dataSource={queryAssistDataSource}
+              onChange={this.onQueryAssistInputChange}
+              dataSource={this.queryAssistDataSource}
             />
           </div>
         </div>
@@ -311,19 +315,19 @@ class IssuesListEditForm extends React.Component {
               id={`${IssuesListEditForm.FILTERS_TYPES.PROJECTS}`}
               title={i18n('Projects')}
             >
-              { this.renderFiltersList(filtersType) }
+              {this.renderFiltersList(filtersType)}
             </Tab>
             <Tab
               id={`${IssuesListEditForm.FILTERS_TYPES.TAGS}`}
               title={i18n('Tags')}
             >
-              { this.renderFiltersList(filtersType) }
+              {this.renderFiltersList(filtersType)}
             </Tab>
             <Tab
               id={`${IssuesListEditForm.FILTERS_TYPES.SEARCHES}`}
               title={i18n('Saved searches')}
             >
-              { this.renderFiltersList(filtersType) }
+              {this.renderFiltersList(filtersType)}
             </Tab>
           </Tabs>
         </div>
@@ -336,13 +340,10 @@ class IssuesListEditForm extends React.Component {
       return '';
     }
 
-    const changeRefreshPeriod = newValue =>
-      this.setState({refreshPeriod: newValue});
-
     return (
       <RefreshPeriod
         seconds={this.state.refreshPeriod}
-        onChange={changeRefreshPeriod}
+        onChange={this.onChangeRefreshPeriod}
       />
     );
   }
@@ -374,7 +375,7 @@ class IssuesListEditForm extends React.Component {
       >
         <Input
           className="ring-form__group"
-          borderless={true}
+          borderless
           size={InputSize.FULL}
           value={this.state.title}
           placeholder={i18n('Set optional title')}
@@ -383,15 +384,17 @@ class IssuesListEditForm extends React.Component {
         />
         {
           youTracks.length > 1 &&
+        (
           <Select
             size={InputSize.FULL}
             type={Select.Type.BUTTON}
             data={youTracks.map(youTrackServiceToSelectItem)}
             selected={youTrackServiceToSelectItem(selectedYouTrack)}
             onSelect={this.changeYouTrack}
-            filter={true}
+            filter
             label={i18n('Select YouTrack')}
           />
+        )
         }
         <div className="ring-form__group">
           {

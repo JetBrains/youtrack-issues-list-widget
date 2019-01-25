@@ -12,19 +12,6 @@ import {
 import './style/issues-list-widget.scss';
 
 class IssueLine extends React.Component {
-  static propTypes = {
-    issue: PropTypes.object,
-    homeUrl: PropTypes.string,
-    expanded: PropTypes.bool,
-    dateFormats: PropTypes.object
-  };
-
-  static defaultProps = {
-    dateFormats: {
-      datePattern: 'YYYY-MM-DD',
-      dateTimePattern: 'YYYY-MM-DD\'T\'HH:mm:ss'
-    }
-  };
 
   static fieldColorToCss(color) {
     return {
@@ -128,6 +115,23 @@ class IssueLine extends React.Component {
     return makeColorFieldPresentationObject(fieldWithColoredValues);
   }
 
+  static onOpenIssue = evt =>
+    evt.stopPropagation();
+
+  static propTypes = {
+    issue: PropTypes.object,
+    homeUrl: PropTypes.string,
+    expanded: PropTypes.bool,
+    dateFormats: PropTypes.object
+  };
+
+  static defaultProps = {
+    dateFormats: {
+      datePattern: 'YYYY-MM-DD',
+      dateTimePattern: 'YYYY-MM-DD\'T\'HH:mm:ss'
+    }
+  };
+
   constructor(props) {
     super(props);
 
@@ -140,14 +144,14 @@ class IssueLine extends React.Component {
     };
   }
 
-  componentWillReceiveProps(props) {
+  static getDerivedStateFromProps(props) {
     const {issue, expanded} = props;
-    this.setState({
+    return {
       issue,
       expanded,
       coloredSquare: IssueLine.getColoredSquareModel(issue),
       valuableFields: IssueLine.getValuableIssueFields(issue)
-    });
+    };
   }
 
   renderFieldValue(issueField) {
@@ -158,19 +162,23 @@ class IssueLine extends React.Component {
         {IssueLine.getValuePresentation(issueField, this.props.dateFormats)}
         {
           firstValue.avatarUrl &&
+        (
           <img
             className="issues-list-widget__field-avatar"
             src={firstValue.avatarUrl}
           />
+        )
         }
         {
           IssueLine.isColoredValue(firstValue) &&
+        (
           <span
             className="issues-list-widget__field-color issues-list-widget__colored-field"
             style={IssueLine.fieldColorToCss(firstValue.color)}
           >
             {IssueLine.getFirstLetter(firstValue)}
           </span>
+        )
         }
       </div>
     );
@@ -224,9 +232,6 @@ class IssueLine extends React.Component {
       highlighted && 'issues-list-widget__issue_highlighted'
     );
 
-    const onOpenIssue = evt =>
-      evt.stopPropagation();
-
     return (
       <div
         className={getIssueLineClassName()}
@@ -235,6 +240,7 @@ class IssueLine extends React.Component {
       >
         {
           coloredSquare &&
+        (
           <span
             className={'issues-list-widget__colored-field'}
             style={coloredSquare.style}
@@ -245,10 +251,11 @@ class IssueLine extends React.Component {
               {coloredSquare.letter}
             </Tooltip>
           </span>
+        )
         }
         <div
           className="issues-list-widget__issue-info"
-          onClick={onOpenIssue}
+          onClick={IssueLine.onOpenIssue}
         >
           <Link
             className={
@@ -256,7 +263,7 @@ class IssueLine extends React.Component {
             }
             href={`${homeUrl}/issue/${issue.idReadable}`}
           >
-            { issue.idReadable }
+            {issue.idReadable}
           </Link>
           <Link
             key={`issue-summary-${issue.id}`}
@@ -265,7 +272,7 @@ class IssueLine extends React.Component {
             }
             href={`${homeUrl}/issue/${issue.idReadable}`}
           >
-            { issue.summary }
+            {issue.summary}
           </Link>
         </div>
         <div className="issues-list-widget__issue-toggler">
@@ -287,12 +294,14 @@ class IssueLine extends React.Component {
         </div>
         {
           expanded &&
+        (
           <div
             className="issues-list-widget__issue-expanded-block"
             data-test="issue-line-expanded-block"
           >
             {this.renderFields(valuableFields)}
           </div>
+        )
         }
       </div>
     );
