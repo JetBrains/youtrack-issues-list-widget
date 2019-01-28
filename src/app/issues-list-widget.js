@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LoaderInline from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
-import Link from '@jetbrains/ring-ui/components/link/link';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
-import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
+import ConfigurableWidget from '@jetbrains/hub-widget-ui/dist/configurable-widget';
 
 import ServiceResource from './components/service-resource';
 import {loadDateFormats, loadIssues, loadTotalIssuesCount} from './resources';
 import IssuesListEditForm from './issues-list-edit-form';
-import IssueLine from './issue-line';
 
 import './style/issues-list-widget.scss';
+import Content from './content';
 
 class IssuesListWidget extends React.Component {
 
@@ -63,6 +61,25 @@ class IssuesListWidget extends React.Component {
 
   static youTrackServiceNeedsUpdate = service => !service.name;
 
+  static getDefaultWidgetTitle = () =>
+    i18n('Issues List');
+
+  static getWidgetTitle = (search, context, title, issuesCount, youTrack) => {
+    let displayedTitle =
+      title || IssuesListWidget.getFullSearchPresentation(context, search);
+    if (issuesCount) {
+      const superScriptIssuesCount = `${issuesCount}`.split('').
+        map(IssuesListWidget.digitToUnicodeSuperScriptDigit).join('');
+      displayedTitle += ` ${superScriptIssuesCount}`;
+    }
+    return {
+      text: displayedTitle,
+      href: youTrack && IssuesListWidget.getIssueListLink(
+        youTrack.homeUrl, context, search
+      )
+    };
+  };
+
   static propTypes = {
     dashboardApi: PropTypes.object,
     registerWidgetApi: PropTypes.func
@@ -92,47 +109,54 @@ class IssuesListWidget extends React.Component {
   }
 
   initialize = async dashboardApi => {
-    this.setLoadingEnabled(true);
+    this.setState({isLoading: true});
     const config = await dashboardApi.readConfig();
-    const {search, context, title, refreshPeriod} = (config || {});
     const isNew = !config;
-
-    if (!isNew) {
-      this.changeSearch(search, context);
-      await this.showListFromCache(search, context);
-    }
-
-    this.initRefreshPeriod(
-      refreshPeriod || IssuesListWidget.DEFAULT_REFRESH_PERIOD
-    );
 
     const youTrackService =
       await IssuesListWidget.getDefaultYouTrackService(dashboardApi, config);
-    if (youTrackService && youTrackService.id) {
-      const onYouTrackSpecified = async () => {
-        if (isNew) {
-          dashboardApi.enterConfigMode();
-          this.setState({isConfiguring: true, isNew});
-        } else {
-          this.changeTitle(title);
-          await this.loadIssues(search, context);
-          const dateFormats = await loadDateFormats(
-            this.fetchYouTrack
-          );
-          this.setState({dateFormats});
-        }
-        this.setLoadingEnabled(false);
-      };
-      this.setYouTrack(youTrackService, onYouTrackSpecified);
+
+    if (isNew) {
+      this.initializeNewWidget(youTrackService);
     } else {
-      this.setState({isLoadDataError: true});
-      this.setLoadingEnabled(false);
+      await this.initializeExistingWidget(youTrackService, config);
     }
   };
 
-  setLoadingEnabled(isLoading) {
-    this.props.dashboardApi.setLoadingAnimationEnabled(isLoading);
-    this.setState({isLoading});
+  initializeNewWidget(youTrackService) {
+    if (youTrackService && youTrackService.id) {
+      this.setState({
+        isConfiguring: true,
+        isNew: true,
+        youTrack: youTrackService,
+        isLoading: false
+      });
+    }
+    this.setState({isLoadDataError: true, isLoading: false});
+  }
+
+  async initializeExistingWidget(youTrackService, config) {
+    const {search, context, refreshPeriod, title} =
+      (config || {});
+
+    this.setState({
+      title,
+      search: search || '',
+      context,
+      refreshPeriod: refreshPeriod || IssuesListWidget.DEFAULT_REFRESH_PERIOD
+    });
+    await this.showListFromCache(search, context);
+
+    if (youTrackService && youTrackService.id) {
+      const onYouTrackSpecified = async () => {
+        await this.loadIssues(search, context);
+        const dateFormats = await loadDateFormats(
+          this.fetchYouTrack
+        );
+        this.setState({dateFormats, isLoading: false});
+      };
+      this.setYouTrack(youTrackService, onYouTrackSpecified);
+    }
   }
 
   async showListFromCache(search, context) {
@@ -188,10 +212,9 @@ class IssuesListWidget extends React.Component {
     } = formParameters;
     this.setYouTrack(
       selectedYouTrack, async () => {
-        this.initRefreshPeriod(refreshPeriod);
-        this.changeSearch(
-          search, context, async () => {
-            this.changeTitle(title);
+        this.setState(
+          {search: search || '', context, title, refreshPeriod},
+          async () => {
             await this.loadIssues();
             await this.props.dashboardApi.storeConfig({
               search,
@@ -222,122 +245,39 @@ class IssuesListWidget extends React.Component {
     }
   };
 
-  initRefreshPeriod = newRefreshPeriod => {
-    if (newRefreshPeriod !== this.state.refreshPeriod) {
-      this.setState({refreshPeriod: newRefreshPeriod});
-    }
-
-    const millisInSec = 1000;
-    setTimeout(async () => {
-      const {
-        isConfiguring,
-        refreshPeriod,
-        search,
-        context
-      } = this.state;
-      if (!isConfiguring && refreshPeriod === newRefreshPeriod) {
-        await this.loadIssues(search, context);
-        this.initRefreshPeriod(refreshPeriod);
-      }
-    }, newRefreshPeriod * millisInSec);
-  };
-
-  changeSearch = (search, context, onChangeSearchCallback) => {
-    this.setState(
-      {search: search || '', context},
-      async () => onChangeSearchCallback && await onChangeSearchCallback()
-    );
-  };
-
-  changeTitle = title => {
-    this.setState(
-      {title}, () => this.updateTitle()
-    );
-  };
-
-  changeIssuesCount = issuesCount => {
-    this.setState(
-      {issuesCount}, () => this.updateTitle()
-    );
-  };
-
   fetchYouTrack = async (url, params) => {
     const {dashboardApi} = this.props;
     const {youTrack} = this.state;
     return await dashboardApi.fetch(youTrack.id, url, params);
   };
 
-  updateTitle = () => {
-    const {search, context, title, issuesCount, youTrack} = this.state;
-    let displayedTitle =
-      title || IssuesListWidget.getFullSearchPresentation(context, search);
-    if (issuesCount) {
-      const superScriptIssuesCount = `${issuesCount}`.split('').
-        map(IssuesListWidget.digitToUnicodeSuperScriptDigit).join('');
-      displayedTitle += ` ${superScriptIssuesCount}`;
-    }
-    this.props.dashboardApi.setTitle(
-      displayedTitle,
-      IssuesListWidget.getIssueListLink(youTrack.homeUrl, context, search)
-    );
-  };
-
-  editSearchQuery = () => {
-    this.props.dashboardApi.enterConfigMode();
+  editSearchQuery = () =>
     this.setState({isConfiguring: true});
-  };
 
-  renderConfiguration() {
-    return (
-      <div className="issues-list-widget">
-        <IssuesListEditForm
-          search={this.state.search}
-          context={this.state.context}
-          title={this.state.title}
-          refreshPeriod={this.state.refreshPeriod}
-          onSubmit={this.submitConfiguration}
-          onCancel={this.cancelConfiguration}
-          dashboardApi={this.props.dashboardApi}
-          youTrackId={this.state.youTrack.id}
-        />
-      </div>
-    );
-  }
-
-  renderNoIssuesError() {
-    return (
-      <EmptyWidget
-        face={EmptyWidgetFaces.OK}
-        message={i18n('No issues found')}
-      >
-        <Link
-          pseudo
-          onClick={this.editSearchQuery}
-        >
-          {i18n('Edit search query')}
-        </Link>
-      </EmptyWidget>
-    );
-  }
-
-  renderLoadDataError() {
-    return (
-      <EmptyWidget
-        face={EmptyWidgetFaces.ERROR}
-        message={i18n('Can\'t load information from service.')}
+  renderConfiguration = () => (
+    <div className="issues-list-widget">
+      <IssuesListEditForm
+        search={this.state.search}
+        context={this.state.context}
+        title={this.state.title}
+        refreshPeriod={this.state.refreshPeriod}
+        onSubmit={this.submitConfiguration}
+        onCancel={this.cancelConfiguration}
+        dashboardApi={this.props.dashboardApi}
+        youTrackId={this.state.youTrack.id}
       />
-    );
-  }
+    </div>
+  );
 
-  async loadIssues(search, context) {
+  loadIssues = async (search, context) => {
     try {
       await this.loadIssuesUnsafe(search, context);
     } catch (error) {
       this.setState({isLoadDataError: true});
     }
-  }
+  };
 
-  async loadIssuesUnsafe(search, context) {
+  loadIssuesUnsafe = async (search, context) => {
     const currentSearch = search || this.state.search;
     const currentContext = context || this.state.context;
     const issues = await loadIssues(
@@ -350,7 +290,7 @@ class IssuesListWidget extends React.Component {
       });
       this.loadIssuesCount(issues, currentSearch, currentContext);
     }
-  }
+  };
 
   loadNextPageOfIssues = async () => {
     const {issues, search, context} = this.state;
@@ -367,14 +307,14 @@ class IssuesListWidget extends React.Component {
     }
   };
 
-  async loadIssuesCount(issues, search, context) {
+  loadIssuesCount = async (issues, search, context) => {
     const issuesCount = issues.length
       ? await loadTotalIssuesCount(
         this.fetchYouTrack, issues[0], search, context
       )
       : 0;
-    this.changeIssuesCount(issuesCount);
-  }
+    this.setState({issuesCount});
+  };
 
   getLoadMoreCount() {
     const {issuesCount, issues} = this.state;
@@ -383,94 +323,64 @@ class IssuesListWidget extends React.Component {
       : 0;
   }
 
-  renderLoader() {
-    return <LoaderInline/>;
-  }
-
-  renderWidgetBody() {
+  renderContent = () => {
     const {
       issues,
-      youTrack,
-      expandedIssueId,
+      isLoading,
+      fromCache,
+      isLoadDataError,
+      dateFormats,
+      issuesCount,
       isNextPageLoading,
-      dateFormats
+      refreshPeriod
     } = this.state;
-    const homeUrl = youTrack ? youTrack.homeUrl : '';
-    const loadMoreCount = this.getLoadMoreCount();
-
-    const setExpandedIssueId = issueId =>
-      evt => {
-        if (evt.target && evt.target.href) {
-          return;
-        }
-        const isAlreadyExpanded = issueId === expandedIssueId;
-        this.setState({expandedIssueId: isAlreadyExpanded ? null : issueId});
-      };
+    const millisInSec = 1000;
 
     return (
-      <div className="issues-list-widget">
-        {
-          (issues || []).map(issue => (
-            <div
-              key={`issue-${issue.id}`}
-              onClick={setExpandedIssueId(issue.id)}
-            >
-              <IssueLine
-                issue={issue}
-                homeUrl={homeUrl}
-                expanded={expandedIssueId === issue.id}
-                dateFormats={dateFormats}
-              />
-            </div>
-          ))
-        }
-        {
-          loadMoreCount > 0 && !isNextPageLoading &&
-        (
-          <div
-            onClick={this.loadNextPageOfIssues}
-            className="issues-list-widget__load-more"
-          >
-            <Link pseudo>
-              {
-                loadMoreCount === 1
-                  ? i18n('Load one more issue')
-                  : i18n('Load {{loadMoreCount}} more issues', {loadMoreCount})
-              }
-            </Link>
-          </div>
-        )
-        }
-        {
-          isNextPageLoading && <LoaderInline/>
-        }
-      </div>
+      <Content
+        youTrack={this.state.youTrack}
+        issues={issues}
+        issuesCount={issuesCount}
+        isLoading={isLoading}
+        fromCache={fromCache}
+        isLoadDataError={isLoadDataError}
+        isNextPageLoading={isNextPageLoading}
+        onLoadMore={this.loadNextPageOfIssues}
+        onEdit={this.editSearchQuery}
+        dateFormats={dateFormats}
+        tickPeriod={refreshPeriod * millisInSec}
+        onTick={this.loadIssues}
+      />
     );
-  }
+  };
 
   // eslint-disable-next-line complexity
   render() {
     const {
       isConfiguring,
-      issues,
-      isLoading,
-      fromCache,
-      isLoadDataError
+      search,
+      context,
+      title,
+      issuesCount,
+      youTrack
     } = this.state;
 
-    if (isLoadDataError && !fromCache) {
-      return this.renderLoadDataError();
-    }
-    if (isConfiguring) {
-      return this.renderConfiguration();
-    }
-    if (isLoading && !fromCache) {
-      return this.renderLoader();
-    }
-    if (!issues || !issues.length) {
-      return this.renderNoIssuesError();
-    }
-    return this.renderWidgetBody();
+    const widgetTitle = isConfiguring
+      ? IssuesListWidget.getDefaultWidgetTitle()
+      : IssuesListWidget.getWidgetTitle(
+        search, context, title, issuesCount, youTrack
+      );
+
+    return (
+      <ConfigurableWidget
+        isConfiguring={isConfiguring}
+        dashboardApi={this.props.dashboardApi}
+        widgetTitle={widgetTitle}
+        widgetLoader={this.state.isLoading}
+        Configuration={this.renderConfiguration}
+        Content={this.renderContent}
+      />
+    );
   }
 }
 

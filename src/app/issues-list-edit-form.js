@@ -367,7 +367,7 @@ class IssuesListEditForm extends React.Component {
     return (
       <ConfigurationForm
         warning={errorMessage}
-        isInvalid={errorMessage}
+        isInvalid={!!errorMessage}
         isLoading={this.state.isLoading}
         panelControls={this.renderRefreshPeriod()}
         onSave={this.submitForm}
