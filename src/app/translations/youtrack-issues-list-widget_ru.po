@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-22 21:04\n"
+"PO-Revision-Date: 2019-01-28 11:33\n"
 
-#: src/app/issues-list-widget.js:326
+#: src/app/issues-list-widget.js:327
 msgid "Can't load information from service."
 msgstr "Не удается загрузить информацию от сервиса."
 
@@ -21,12 +21,12 @@ msgstr "Не удается загрузить информацию от сер�
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/issues-list-widget.js:316
+#: src/app/issues-list-widget.js:317
 msgid "Edit search query"
 msgstr "Редактировать поисковый запрос"
 
-#: src/app/issues-list-edit-form.js:293
-#: src/app/issues-list-edit-form.js:45
+#: src/app/issues-list-edit-form.js:297
+#: src/app/issues-list-edit-form.js:34
 msgid "Everything"
 msgstr "Все"
 
@@ -38,27 +38,27 @@ msgstr "январь|февраль|март|апрель|май|июнь|июл
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
 
-#: src/app/issues-list-widget.js:433
+#: src/app/issues-list-widget.js:437
 msgid "Load one more issue"
 msgstr "Загрузить еще одну задачу"
 
-#: src/app/issues-list-widget.js:434
+#: src/app/issues-list-widget.js:438
 msgid "Load {{loadMoreCount}} more issues"
 msgstr "Загрузить еще задачи ({{loadMoreCount}})"
 
-#: src/app/issues-list-widget.js:310
+#: src/app/issues-list-widget.js:311
 msgid "No issues found"
 msgstr "Задачи не найдены"
 
-#: src/app/issues-list-edit-form.js:213
+#: src/app/issues-list-edit-form.js:223
 msgid "No projects"
 msgstr "Нет проектов"
 
-#: src/app/issues-list-edit-form.js:215
+#: src/app/issues-list-edit-form.js:225
 msgid "No saved searches"
 msgstr "Нет сохраненных поисков"
 
-#: src/app/issues-list-edit-form.js:214
+#: src/app/issues-list-edit-form.js:224
 msgid "No tags"
 msgstr "Нет тегов"
 
@@ -66,7 +66,7 @@ msgstr "Нет тегов"
 msgid "Oops! Something went wrong..."
 msgstr "К сожалению, возникла какая-то проблема..."
 
-#: src/app/issues-list-edit-form.js:312
+#: src/app/issues-list-edit-form.js:316
 msgid "Projects"
 msgstr "Проекты"
 
@@ -74,19 +74,19 @@ msgstr "Проекты"
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/app/issues-list-edit-form.js:324
+#: src/app/issues-list-edit-form.js:328
 msgid "Saved searches"
 msgstr "Сохраненные поиски"
 
-#: src/app/issues-list-edit-form.js:393
+#: src/app/issues-list-edit-form.js:395
 msgid "Select YouTrack"
 msgstr "Выберите YouTrack"
 
-#: src/app/issues-list-edit-form.js:100
+#: src/app/issues-list-edit-form.js:98
 msgid "Selected YouTrack service is not available"
 msgstr "Выбранный сервис YouTrack недоступен"
 
-#: src/app/issues-list-edit-form.js:380
+#: src/app/issues-list-edit-form.js:381
 msgid "Set optional title"
 msgstr "Задайте необязательный заголовок"
 
@@ -98,11 +98,11 @@ msgstr "воскресенье|понедельник|вторник|среда|
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "вск|пнд|втр|срд|чтв|птн|сбт"
 
-#: src/app/issues-list-edit-form.js:318
+#: src/app/issues-list-edit-form.js:322
 msgid "Tags"
 msgstr "Теги"
 
-#: src/app/issues-list-edit-form.js:299
+#: src/app/issues-list-edit-form.js:303
 msgid "Type search query"
 msgstr "Введите поисковый запрос"
 
@@ -118,7 +118,7 @@ msgstr "Виджет обновляется раз в {{minutesCount}} мин"
 msgid "am|pm"
 msgstr "ДП|ПП"
 
-#: src/app/issues-list-widget.js:52
+#: src/app/issues-list-widget.js:48
 msgid "issues"
 msgstr "задачи"
 

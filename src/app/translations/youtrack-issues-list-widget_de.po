@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-01-22 21:04\n"
+"PO-Revision-Date: 2019-01-28 11:33\n"
 
-#: src/app/issues-list-widget.js:326
+#: src/app/issues-list-widget.js:327
 msgid "Can't load information from service."
 msgstr "Daten aus Service können nicht geladen werden."
 
@@ -21,12 +21,12 @@ msgstr "Daten aus Service können nicht geladen werden."
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/app/issues-list-widget.js:316
+#: src/app/issues-list-widget.js:317
 msgid "Edit search query"
 msgstr "Suchanfrage bearbeiten"
 
-#: src/app/issues-list-edit-form.js:293
-#: src/app/issues-list-edit-form.js:45
+#: src/app/issues-list-edit-form.js:297
+#: src/app/issues-list-edit-form.js:34
 msgid "Everything"
 msgstr "Alles"
 
@@ -38,27 +38,27 @@ msgstr "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|Novemb
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Jan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez"
 
-#: src/app/issues-list-widget.js:433
+#: src/app/issues-list-widget.js:437
 msgid "Load one more issue"
 msgstr "Ein weiteres Ticket laden"
 
-#: src/app/issues-list-widget.js:434
+#: src/app/issues-list-widget.js:438
 msgid "Load {{loadMoreCount}} more issues"
 msgstr "{{loadMoreCount}} weitere Tickets laden"
 
-#: src/app/issues-list-widget.js:310
+#: src/app/issues-list-widget.js:311
 msgid "No issues found"
 msgstr "Keine Tickets gefunden"
 
-#: src/app/issues-list-edit-form.js:213
+#: src/app/issues-list-edit-form.js:223
 msgid "No projects"
 msgstr "Keine Projekte"
 
-#: src/app/issues-list-edit-form.js:215
+#: src/app/issues-list-edit-form.js:225
 msgid "No saved searches"
 msgstr "Keine gespeicherten Suchen"
 
-#: src/app/issues-list-edit-form.js:214
+#: src/app/issues-list-edit-form.js:224
 msgid "No tags"
 msgstr "Keine Tags"
 
@@ -66,7 +66,7 @@ msgstr "Keine Tags"
 msgid "Oops! Something went wrong..."
 msgstr "Entschuldigung! Etwas ist schiefgegangen."
 
-#: src/app/issues-list-edit-form.js:312
+#: src/app/issues-list-edit-form.js:316
 msgid "Projects"
 msgstr "Projekte"
 
@@ -74,19 +74,19 @@ msgstr "Projekte"
 msgid "Save"
 msgstr "Speichern"
 
-#: src/app/issues-list-edit-form.js:324
+#: src/app/issues-list-edit-form.js:328
 msgid "Saved searches"
 msgstr "Gespeicherte Suchen"
 
-#: src/app/issues-list-edit-form.js:393
+#: src/app/issues-list-edit-form.js:395
 msgid "Select YouTrack"
 msgstr "YouTrack auswählen"
 
-#: src/app/issues-list-edit-form.js:100
+#: src/app/issues-list-edit-form.js:98
 msgid "Selected YouTrack service is not available"
 msgstr "Ausgewählter YouTrack-Service ist nicht verfügbar"
 
-#: src/app/issues-list-edit-form.js:380
+#: src/app/issues-list-edit-form.js:381
 msgid "Set optional title"
 msgstr "Optional Titel eingeben"
 
@@ -98,11 +98,11 @@ msgstr "Sonntag|Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "So|Mo|Di|Mi|Do|Fr|Sa"
 
-#: src/app/issues-list-edit-form.js:318
+#: src/app/issues-list-edit-form.js:322
 msgid "Tags"
 msgstr "Tags"
 
-#: src/app/issues-list-edit-form.js:299
+#: src/app/issues-list-edit-form.js:303
 msgid "Type search query"
 msgstr "Suchanfrage eingeben"
 
@@ -118,7 +118,7 @@ msgstr "Widget wird alle {{minutesCount}} Minuten aktualisiert"
 msgid "am|pm"
 msgstr "AM|PM"
 
-#: src/app/issues-list-widget.js:52
+#: src/app/issues-list-widget.js:48
 msgid "issues"
 msgstr "Tickets"
 

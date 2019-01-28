@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-01-22 21:04\n"
+"PO-Revision-Date: 2019-01-28 11:33\n"
 
-#: src/app/issues-list-widget.js:326
+#: src/app/issues-list-widget.js:327
 msgid "Can't load information from service."
 msgstr "サービスから情報を読み込むことができません。"
 
@@ -21,12 +21,12 @@ msgstr "サービスから情報を読み込むことができません。"
 msgid "Cancel"
 msgstr "取り消す"
 
-#: src/app/issues-list-widget.js:316
+#: src/app/issues-list-widget.js:317
 msgid "Edit search query"
 msgstr "検索クエリの編集"
 
-#: src/app/issues-list-edit-form.js:293
-#: src/app/issues-list-edit-form.js:45
+#: src/app/issues-list-edit-form.js:297
+#: src/app/issues-list-edit-form.js:34
 msgid "Everything"
 msgstr "すべて"
 
@@ -38,27 +38,27 @@ msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
-#: src/app/issues-list-widget.js:433
+#: src/app/issues-list-widget.js:437
 msgid "Load one more issue"
 msgstr "もう1個課題を読み込む"
 
-#: src/app/issues-list-widget.js:434
+#: src/app/issues-list-widget.js:438
 msgid "Load {{loadMoreCount}} more issues"
 msgstr "もう{{loadMoreCount}}個課題を読み込む"
 
-#: src/app/issues-list-widget.js:310
+#: src/app/issues-list-widget.js:311
 msgid "No issues found"
 msgstr "課題が見つかりません"
 
-#: src/app/issues-list-edit-form.js:213
+#: src/app/issues-list-edit-form.js:223
 msgid "No projects"
 msgstr "プロジェクトがありません"
 
-#: src/app/issues-list-edit-form.js:215
+#: src/app/issues-list-edit-form.js:225
 msgid "No saved searches"
 msgstr "保存した検索はありません"
 
-#: src/app/issues-list-edit-form.js:214
+#: src/app/issues-list-edit-form.js:224
 msgid "No tags"
 msgstr "タグなし"
 
@@ -66,7 +66,7 @@ msgstr "タグなし"
 msgid "Oops! Something went wrong..."
 msgstr "エラー！不明なエラーが発生しました…"
 
-#: src/app/issues-list-edit-form.js:312
+#: src/app/issues-list-edit-form.js:316
 msgid "Projects"
 msgstr "プロジェクト"
 
@@ -74,19 +74,19 @@ msgstr "プロジェクト"
 msgid "Save"
 msgstr "保存"
 
-#: src/app/issues-list-edit-form.js:324
+#: src/app/issues-list-edit-form.js:328
 msgid "Saved searches"
 msgstr "保存した検索条件"
 
-#: src/app/issues-list-edit-form.js:393
+#: src/app/issues-list-edit-form.js:395
 msgid "Select YouTrack"
 msgstr "YouTrackを選択"
 
-#: src/app/issues-list-edit-form.js:100
+#: src/app/issues-list-edit-form.js:98
 msgid "Selected YouTrack service is not available"
 msgstr "選択されたYouTrackサービスはご利用いただけません"
 
-#: src/app/issues-list-edit-form.js:380
+#: src/app/issues-list-edit-form.js:381
 msgid "Set optional title"
 msgstr "タイトル（省略可）を設定"
 
@@ -98,11 +98,11 @@ msgstr "日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "日|月|火|水|木|金|土"
 
-#: src/app/issues-list-edit-form.js:318
+#: src/app/issues-list-edit-form.js:322
 msgid "Tags"
 msgstr "タグ"
 
-#: src/app/issues-list-edit-form.js:299
+#: src/app/issues-list-edit-form.js:303
 msgid "Type search query"
 msgstr "検索クエリを入力"
 
@@ -118,7 +118,7 @@ msgstr "ウィジェットは{{minutesCount}}分ごとに更新されます"
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/issues-list-widget.js:52
+#: src/app/issues-list-widget.js:48
 msgid "issues"
 msgstr "課題"
 
