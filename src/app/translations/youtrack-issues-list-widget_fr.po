@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-01-28 11:33\n"
+"PO-Revision-Date: 2019-02-05 17:11\n"
 
-#: src/app/issues-list-widget.js:327
+#: src/app/content.js:56
 msgid "Can't load information from service."
 msgstr "Impossible de charger les informations du service."
 
@@ -21,7 +21,7 @@ msgstr "Impossible de charger les informations du service."
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/app/issues-list-widget.js:317
+#: src/app/content.js:46
 msgid "Edit search query"
 msgstr "Modifier la requête de recherche"
 
@@ -29,6 +29,10 @@ msgstr "Modifier la requête de recherche"
 #: src/app/issues-list-edit-form.js:34
 msgid "Everything"
 msgstr "Tout"
+
+#: src/app/issues-list-widget.js:65
+msgid "Issues List"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -38,15 +42,15 @@ msgstr "Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Nov
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Jan|Fév|Mar|Avr|Mai|Jun|Jul|Aoû|Sep|Oct|Nov|Déc"
 
-#: src/app/issues-list-widget.js:437
+#: src/app/content.js:119
 msgid "Load one more issue"
 msgstr "Charger un ticket de plus"
 
-#: src/app/issues-list-widget.js:438
+#: src/app/content.js:120
 msgid "Load {{loadMoreCount}} more issues"
 msgstr "Charger {{loadMoreCount}} tickets de plus"
 
-#: src/app/issues-list-widget.js:311
+#: src/app/content.js:40
 msgid "No issues found"
 msgstr "Aucun ticket trouvé"
 
@@ -118,7 +122,7 @@ msgstr "Le widget s'actualise toutes les {{minutesCount}} minutes"
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/issues-list-widget.js:48
+#: src/app/issues-list-widget.js:46
 msgid "issues"
 msgstr "tickets"
 
