@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-05 17:11\n"
+"PO-Revision-Date: 2019-02-06 12:49\n"
 
 #: src/app/content.js:56
 msgid "Can't load information from service."
@@ -34,21 +34,19 @@ msgstr "Todo"
 msgid "Issues List"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic"
 
-#: src/app/content.js:119
-msgid "Load one more issue"
-msgstr "Cargar una incidencia más"
-
-#: src/app/content.js:120
-msgid "Load {{loadMoreCount}} more issues"
-msgstr "Cargar {{loadMoreCount}} incidencias más"
+#: src/app/content.js:118
+msgid "Load 1 more issue"
+msgid_plural "Load {{$count}} more issues"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/app/content.js:40
 msgid "No issues found"
@@ -94,11 +92,11 @@ msgstr "El servicio de YouTrack seleccionado no está disponible"
 msgid "Set optional title"
 msgstr "Establecer título opcional"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr "Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Dom|Lun|Mar|Mié|Jue|Vie|Sáb"
 
@@ -118,7 +116,7 @@ msgstr "El widget se actualiza cada minuto"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "El widget se actualiza cada {{minutesCount}} minutos"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "a. m. |p. m."
 
