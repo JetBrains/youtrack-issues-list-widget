@@ -15,7 +15,7 @@
     "stylelint": "stylelint --ignore-path .gitignore **/*.scss",
     "ci-test": "npm run lint && xvfb-maybe karma start --teamcity",
     "start": "webpack-dev-server -d --history-api-fallback --inline --hot --colors --port 9010",
-    "i18n:extract": "angular-gettext-cli --files \"{src/**/*.js,node_modules/hub-dashboard-addons/components/**/*.js,node_modules/@jetbrains/hub-widget-ui/src/**/*.js}\" --dest src/app/translations/default.pot --marker-name=i18n"
+    "i18n:extract": "angular-gettext-cli --files \"{src/**/*.js,node_modules/hub-dashboard-addons/components/**/*.js,node_modules/@jetbrains/hub-widget-ui/src/**/*.js}\" --dest src/app/translations/default.pot --marker-name=i18n --module-method-plural=plural --module-name=i18n"
   },
   "babel": {
     "presets": "@jetbrains/jetbrains"
@@ -36,7 +36,7 @@
     "fecha": "3.0.0",
     "html-loader": "0.4.4",
     "html-webpack-plugin": "3.2.0",
-    "hub-dashboard-addons": "0.2.0",
+    "hub-dashboard-addons": "0.2.2",
     "json-loader": "0.5.7",
     "node-sass": "4.10.0",
     "postcss-cssnext": "3.1.0",

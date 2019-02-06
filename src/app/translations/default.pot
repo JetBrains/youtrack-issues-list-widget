@@ -4,7 +4,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: src/app/issues-list-widget.js:291
+#: src/app/content.js:56
 msgid "Can't load information from service."
 msgstr ""
 
@@ -12,13 +12,17 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: src/app/issues-list-widget.js:281
+#: src/app/content.js:46
 msgid "Edit search query"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:293
-#: src/app/issues-list-edit-form.js:45
+#: src/app/issues-list-edit-form.js:297
+#: src/app/issues-list-edit-form.js:34
 msgid "Everything"
+msgstr ""
+
+#: src/app/issues-list-widget.js:65
+msgid "Issues List"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
@@ -29,27 +33,25 @@ msgstr ""
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr ""
 
-#: src/app/issues-list-widget.js:396
-msgid "Load one more issue"
-msgstr ""
+#: src/app/content.js:118
+msgid "Load 1 more issue"
+msgid_plural "Load {{$count}} more issues"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/app/issues-list-widget.js:397
-msgid "Load {{loadMoreCount}} more issues"
-msgstr ""
-
-#: src/app/issues-list-widget.js:275
+#: src/app/content.js:40
 msgid "No issues found"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:213
+#: src/app/issues-list-edit-form.js:223
 msgid "No projects"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:215
+#: src/app/issues-list-edit-form.js:225
 msgid "No saved searches"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:214
+#: src/app/issues-list-edit-form.js:224
 msgid "No tags"
 msgstr ""
 
@@ -57,7 +59,7 @@ msgstr ""
 msgid "Oops! Something went wrong..."
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:312
+#: src/app/issues-list-edit-form.js:316
 msgid "Projects"
 msgstr ""
 
@@ -65,19 +67,19 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:324
+#: src/app/issues-list-edit-form.js:328
 msgid "Saved searches"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:393
+#: src/app/issues-list-edit-form.js:395
 msgid "Select YouTrack"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:100
+#: src/app/issues-list-edit-form.js:98
 msgid "Selected YouTrack service is not available"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:380
+#: src/app/issues-list-edit-form.js:381
 msgid "Set optional title"
 msgstr ""
 
@@ -89,11 +91,11 @@ msgstr ""
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:318
+#: src/app/issues-list-edit-form.js:322
 msgid "Tags"
 msgstr ""
 
-#: src/app/issues-list-edit-form.js:299
+#: src/app/issues-list-edit-form.js:303
 msgid "Type search query"
 msgstr ""
 
@@ -109,7 +111,7 @@ msgstr ""
 msgid "am|pm"
 msgstr ""
 
-#: src/app/issues-list-widget.js:52
+#: src/app/issues-list-widget.js:46
 msgid "issues"
 msgstr ""
 

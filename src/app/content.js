@@ -115,11 +115,7 @@ class Content extends React.Component {
             >
               <Link pseudo>
                 {
-                  loadMoreCount === 1
-                    ? i18n('Load one more issue')
-                    : i18n(
-                      'Load {{loadMoreCount}} more issues', {loadMoreCount}
-                    )
+                  i18n.plural(loadMoreCount, 'Load 1 more issue', 'Load {{$count}} more issues')
                 }
               </Link>
             </div>
