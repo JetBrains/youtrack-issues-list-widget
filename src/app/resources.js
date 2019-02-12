@@ -56,7 +56,7 @@ export async function loadDateFormats(fetchYouTrack) {
   };
 
   function toFechaFormat(pattern) {
-    return (pattern || '').replace(/yy/g, 'YY').replace(/dd/g, 'DD').replace('aaa', 'A');
+    return (pattern || '').replace(/y/g, 'Y').replace(/d/g, 'D').replace('aaa', 'A');
   }
 }
 
