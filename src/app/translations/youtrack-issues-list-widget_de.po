@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-02-06 21:04\n"
+"PO-Revision-Date: 2019-02-20 17:01\n"
 
 #: src/app/content.js:56
 msgid "Can't load information from service."
@@ -30,7 +30,7 @@ msgstr "Suchanfrage bearbeiten"
 msgid "Everything"
 msgstr "Alles"
 
-#: src/app/issues-list-widget.js:65
+#: src/app/issues-list-widget.js:66
 msgid "Issues List"
 msgstr ""
 
