@@ -45,19 +45,20 @@ class IssuesListWidget extends React.Component {
     context && context.name && `#{${context.name}}`, search
   ].filter(str => !!str).join(' ') || `#${i18n('issues')}`;
 
-  static getDefaultYouTrackService = async (dashboardApi, config) => {
-    if (config && config.youTrack && config.youTrack.id) {
-      return config.youTrack;
-    }
-    try {
-      // TODO: pass min-required version here
-      return await ServiceResource.getYouTrackService(
-        dashboardApi.fetchHub.bind(dashboardApi)
-      );
-    } catch (err) {
-      return null;
-    }
-  };
+  static getDefaultYouTrackService =
+    async (dashboardApi, predefinedYouTrack) => {
+      if (predefinedYouTrack && predefinedYouTrack.id) {
+        return predefinedYouTrack;
+      }
+      try {
+        // TODO: pass min-required version here
+        return await ServiceResource.getYouTrackService(
+          dashboardApi.fetchHub.bind(dashboardApi)
+        );
+      } catch (err) {
+        return null;
+      }
+    };
 
   static youTrackServiceNeedsUpdate = service => !service.name;
 
@@ -82,6 +83,7 @@ class IssuesListWidget extends React.Component {
 
   static propTypes = {
     dashboardApi: PropTypes.object,
+    configWrapper: PropTypes.object,
     registerWidgetApi: PropTypes.func
   };
 
@@ -110,16 +112,17 @@ class IssuesListWidget extends React.Component {
 
   initialize = async dashboardApi => {
     this.setState({isLoading: true});
-    const config = await dashboardApi.readConfig();
-    const isNew = !config;
+    await this.props.configWrapper.init();
 
     const youTrackService =
-      await IssuesListWidget.getDefaultYouTrackService(dashboardApi, config);
+      await IssuesListWidget.getDefaultYouTrackService(
+        dashboardApi, this.props.configWrapper.getFieldValue('youTrack')
+      );
 
-    if (isNew) {
+    if (this.props.configWrapper.isNewConfig()) {
       this.initializeNewWidget(youTrackService);
     } else {
-      await this.initializeExistingWidget(youTrackService, config);
+      await this.initializeExistingWidget(youTrackService);
     }
   };
 
@@ -135,9 +138,12 @@ class IssuesListWidget extends React.Component {
     this.setState({isLoadDataError: true, isLoading: false});
   }
 
-  async initializeExistingWidget(youTrackService, config) {
-    const {search, context, refreshPeriod, title} =
-      (config || {});
+  async initializeExistingWidget(youTrackService) {
+    const search = this.props.configWrapper.getFieldValue('search');
+    const context = this.props.configWrapper.getFieldValue('context');
+    const refreshPeriod =
+      this.props.configWrapper.getFieldValue('refreshPeriod');
+    const title = this.props.configWrapper.getFieldValue('title');
 
     this.setState({
       title,
@@ -193,7 +199,7 @@ class IssuesListWidget extends React.Component {
               updatedYouTrackService, onAfterYouTrackSetFunction
             );
             if (!this.state.isConfiguring) {
-              dashboardApi.storeConfig({
+              this.props.configWrapper.update({
                 youTrack: {
                   id: updatedYouTrackService.id,
                   homeUrl: updatedYouTrackService.homeUrl
@@ -216,7 +222,7 @@ class IssuesListWidget extends React.Component {
           {search: search || '', context, title, refreshPeriod},
           async () => {
             await this.loadIssues();
-            await this.props.dashboardApi.storeConfig({
+            await this.props.configWrapper.replace({
               search,
               context,
               title,
