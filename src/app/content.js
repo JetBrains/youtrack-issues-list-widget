@@ -22,7 +22,8 @@ class Content extends React.Component {
     isNextPageLoading: PropTypes.bool,
     onLoadMore: PropTypes.func,
     onEdit: PropTypes.func,
-    dateFormats: PropTypes.object
+    dateFormats: PropTypes.object,
+    editable: PropTypes.bool
   };
 
   constructor(props) {
@@ -39,12 +40,15 @@ class Content extends React.Component {
         face={EmptyWidgetFaces.OK}
         message={i18n('No issues found')}
       >
-        <Link
-          pseudo
-          onClick={this.props.onEdit}
-        >
-          {i18n('Edit search query')}
-        </Link>
+        {
+          this.props.editable &&
+          <Link
+            pseudo
+            onClick={this.props.onEdit}
+          >
+            {i18n('Edit search query')}
+          </Link>
+        }
       </EmptyWidget>
     );
   }

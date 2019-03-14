@@ -338,13 +338,14 @@ class IssuesListWidget extends React.Component {
       dateFormats,
       issuesCount,
       isNextPageLoading,
-      refreshPeriod
+      refreshPeriod,
+      youTrack
     } = this.state;
     const millisInSec = 1000;
 
     return (
       <Content
-        youTrack={this.state.youTrack}
+        youTrack={youTrack}
         issues={issues}
         issuesCount={issuesCount}
         isLoading={isLoading}
@@ -356,6 +357,7 @@ class IssuesListWidget extends React.Component {
         dateFormats={dateFormats}
         tickPeriod={refreshPeriod * millisInSec}
         onTick={this.loadIssues}
+        editable={this.props.editable}
       />
     );
   };
