@@ -84,7 +84,8 @@ class IssuesListWidget extends React.Component {
   static propTypes = {
     dashboardApi: PropTypes.object,
     configWrapper: PropTypes.object,
-    registerWidgetApi: PropTypes.func
+    registerWidgetApi: PropTypes.func,
+    editable: PropTypes.bool
   };
 
   constructor(props) {
@@ -130,7 +131,6 @@ class IssuesListWidget extends React.Component {
     if (youTrackService && youTrackService.id) {
       this.setState({
         isConfiguring: true,
-        isNew: true,
         youTrack: youTrackService,
         isLoading: false
       });
@@ -198,7 +198,7 @@ class IssuesListWidget extends React.Component {
             this.setYouTrack(
               updatedYouTrackService, onAfterYouTrackSetFunction
             );
-            if (!this.state.isConfiguring) {
+            if (!this.state.isConfiguring && this.props.editable) {
               this.props.configWrapper.update({
                 youTrack: {
                   id: updatedYouTrackService.id,
@@ -233,7 +233,7 @@ class IssuesListWidget extends React.Component {
               }
             });
             this.setState(
-              {isConfiguring: false, fromCache: false, isNew: false}
+              {isConfiguring: false, fromCache: false}
             );
           }
         );
@@ -242,7 +242,7 @@ class IssuesListWidget extends React.Component {
   };
 
   cancelConfiguration = async () => {
-    if (this.state.isNew) {
+    if (this.props.configWrapper.isNewConfig()) {
       await this.props.dashboardApi.removeWidget();
     } else {
       this.setState({isConfiguring: false});
