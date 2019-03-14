@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-02-20 17:01\n"
+"PO-Revision-Date: 2019-03-14 17:18\n"
 
-#: src/app/content.js:56
+#: src/app/content.js:62
 msgid "Can't load information from service."
 msgstr "Не удается загрузить информацию от сервиса."
 
@@ -21,7 +21,7 @@ msgstr "Не удается загрузить информацию от сер�
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/content.js:46
+#: src/app/content.js:50
 msgid "Edit search query"
 msgstr "Редактировать поисковый запрос"
 
@@ -32,7 +32,7 @@ msgstr "Все"
 
 #: src/app/issues-list-widget.js:66
 msgid "Issues List"
-msgstr ""
+msgstr "Список задач"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -42,15 +42,15 @@ msgstr "январь|февраль|март|апрель|май|июнь|июл
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
 
-#: src/app/content.js:118
+#: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Загрузить еще {{$count}} задачу"
+msgstr[1] "Загрузить еще {{$count}} задачи"
+msgstr[2] "Загрузить еще {{$count}} задач"
+msgstr[3] "Загрузить еще {{$count}} задач"
 
-#: src/app/content.js:40
+#: src/app/content.js:41
 msgid "No issues found"
 msgstr "Задачи не найдены"
 

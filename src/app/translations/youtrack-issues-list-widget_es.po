@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-20 17:01\n"
+"PO-Revision-Date: 2019-03-14 17:18\n"
 
-#: src/app/content.js:56
+#: src/app/content.js:62
 msgid "Can't load information from service."
 msgstr "No es posible cargar información desde el servicio."
 
@@ -21,7 +21,7 @@ msgstr "No es posible cargar información desde el servicio."
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/app/content.js:46
+#: src/app/content.js:50
 msgid "Edit search query"
 msgstr "Editar la consulta de búsqueda"
 
@@ -42,13 +42,13 @@ msgstr "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Nov
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic"
 
-#: src/app/content.js:118
+#: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/app/content.js:40
+#: src/app/content.js:41
 msgid "No issues found"
 msgstr "No se ha encontrado ninguna incidencia."
 

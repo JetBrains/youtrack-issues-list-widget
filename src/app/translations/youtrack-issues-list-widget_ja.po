@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-02-20 17:01\n"
+"PO-Revision-Date: 2019-03-14 17:18\n"
 
-#: src/app/content.js:56
+#: src/app/content.js:62
 msgid "Can't load information from service."
 msgstr "サービスから情報を読み込むことができません。"
 
@@ -21,7 +21,7 @@ msgstr "サービスから情報を読み込むことができません。"
 msgid "Cancel"
 msgstr "取り消す"
 
-#: src/app/content.js:46
+#: src/app/content.js:50
 msgid "Edit search query"
 msgstr "検索クエリの編集"
 
@@ -32,7 +32,7 @@ msgstr "すべて"
 
 #: src/app/issues-list-widget.js:66
 msgid "Issues List"
-msgstr ""
+msgstr "課題リスト"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -42,12 +42,12 @@ msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
-#: src/app/content.js:118
+#: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
+msgstr[0] "さらに{{$count}}件の課題を読み込む"
 
-#: src/app/content.js:40
+#: src/app/content.js:41
 msgid "No issues found"
 msgstr "課題が見つかりません"
 
