@@ -42,12 +42,14 @@ class Content extends React.Component {
       >
         {
           this.props.editable &&
+        (
           <Link
             pseudo
             onClick={this.props.onEdit}
           >
             {i18n('Edit search query')}
           </Link>
+        )
         }
       </EmptyWidget>
     );

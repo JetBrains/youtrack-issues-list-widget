@@ -5,10 +5,10 @@ import React from 'react';
 import {render} from 'react-dom';
 import DashboardAddons from 'hub-dashboard-addons';
 import {setLocale} from 'hub-dashboard-addons/dist/localization';
+import ConfigWrapper from '@jetbrains/hub-widget-ui/dist/config-wrapper';
 
 import IssuesListWidget from './issues-list-widget';
 import TRANSLATIONS from './translations';
-import ConfigWrapper from './config-wrapper';
 
 const CONFIG_FIELDS = [
   'search', 'context', 'title', 'refreshPeriod', 'youTrack'
