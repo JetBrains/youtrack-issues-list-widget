@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-03-14 17:18\n"
+"PO-Revision-Date: 2019-03-18 21:02\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -32,7 +32,7 @@ msgstr "Todo"
 
 #: src/app/issues-list-widget.js:66
 msgid "Issues List"
-msgstr ""
+msgstr "Lista de incidencias"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -45,8 +45,8 @@ msgstr "Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic"
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Cargar 1 incidencia más"
+msgstr[1] "Cargar {{$count}} incidencias más"
 
 #: src/app/content.js:41
 msgid "No issues found"
