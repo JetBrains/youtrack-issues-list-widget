@@ -103,7 +103,10 @@ class IssuesListWidget extends React.Component {
         isLoading: false,
         isLoadDataError: false
       }),
-      onRefresh: () => this.loadIssues()
+      onRefresh: () => this.loadIssues(),
+      getExternalWidgetOptions: () => ({
+        youTrack: (this.props.configWrapper.getFieldValue('youTrack') || {}).id
+      })
     });
   }
 
