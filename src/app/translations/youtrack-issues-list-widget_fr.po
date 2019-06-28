@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-06-28 10:39\n"
+"PO-Revision-Date: 2019-06-28 14:08\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -25,8 +25,8 @@ msgstr "Annuler"
 msgid "Edit search query"
 msgstr "Modifier la requête de recherche"
 
-#: src/app/issues-list-edit-form.js:297
-#: src/app/issues-list-edit-form.js:34
+#: src/app/issues-list-edit-form.js:300
+#: src/app/issues-list-edit-form.js:35
 msgid "Everything"
 msgstr "Tout"
 
@@ -52,15 +52,15 @@ msgstr[1] "Charger {{$count}} tickets supplémentaires"
 msgid "No issues found"
 msgstr "Aucun ticket trouvé"
 
-#: src/app/issues-list-edit-form.js:223
+#: src/app/issues-list-edit-form.js:226
 msgid "No projects"
 msgstr "Aucun projet"
 
-#: src/app/issues-list-edit-form.js:225
+#: src/app/issues-list-edit-form.js:228
 msgid "No saved searches"
 msgstr "Aucune recherche enregistrée"
 
-#: src/app/issues-list-edit-form.js:224
+#: src/app/issues-list-edit-form.js:227
 msgid "No tags"
 msgstr "Aucune balise"
 
@@ -68,7 +68,7 @@ msgstr "Aucune balise"
 msgid "Oops! Something went wrong..."
 msgstr "Oups ! Un problème est survenu..."
 
-#: src/app/issues-list-edit-form.js:316
+#: src/app/issues-list-edit-form.js:319
 msgid "Projects"
 msgstr "Projets"
 
@@ -76,19 +76,19 @@ msgstr "Projets"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: src/app/issues-list-edit-form.js:328
+#: src/app/issues-list-edit-form.js:331
 msgid "Saved searches"
 msgstr "Recherches enregistrées"
 
-#: src/app/issues-list-edit-form.js:395
+#: src/app/issues-list-edit-form.js:398
 msgid "Select YouTrack"
 msgstr "Sélectionner YouTrack"
 
-#: src/app/issues-list-edit-form.js:98
+#: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
 msgstr "Le service YouTrack sélectionné n'est pas disponible"
 
-#: src/app/issues-list-edit-form.js:381
+#: src/app/issues-list-edit-form.js:384
 msgid "Set optional title"
 msgstr "Définir un titre facultatif"
 
@@ -100,11 +100,11 @@ msgstr "Dimanche|Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Dim|Lun|Mar|Mer|Jeu|Ven|Sam"
 
-#: src/app/issues-list-edit-form.js:322
+#: src/app/issues-list-edit-form.js:325
 msgid "Tags"
 msgstr "Balises"
 
-#: src/app/issues-list-edit-form.js:303
+#: src/app/issues-list-edit-form.js:306
 msgid "Type search query"
 msgstr "Saisissez la requête de recherche"
 

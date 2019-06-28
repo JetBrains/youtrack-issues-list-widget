@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-06-28 10:40\n"
+"PO-Revision-Date: 2019-06-28 14:08\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -25,8 +25,8 @@ msgstr "取り消す"
 msgid "Edit search query"
 msgstr "検索クエリの編集"
 
-#: src/app/issues-list-edit-form.js:297
-#: src/app/issues-list-edit-form.js:34
+#: src/app/issues-list-edit-form.js:300
+#: src/app/issues-list-edit-form.js:35
 msgid "Everything"
 msgstr "すべて"
 
@@ -51,15 +51,15 @@ msgstr[0] "さらに{{$count}}件の課題を読み込む"
 msgid "No issues found"
 msgstr "課題が見つかりません"
 
-#: src/app/issues-list-edit-form.js:223
+#: src/app/issues-list-edit-form.js:226
 msgid "No projects"
 msgstr "プロジェクトがありません"
 
-#: src/app/issues-list-edit-form.js:225
+#: src/app/issues-list-edit-form.js:228
 msgid "No saved searches"
 msgstr "保存した検索はありません"
 
-#: src/app/issues-list-edit-form.js:224
+#: src/app/issues-list-edit-form.js:227
 msgid "No tags"
 msgstr "タグなし"
 
@@ -67,7 +67,7 @@ msgstr "タグなし"
 msgid "Oops! Something went wrong..."
 msgstr "エラー！不明なエラーが発生しました…"
 
-#: src/app/issues-list-edit-form.js:316
+#: src/app/issues-list-edit-form.js:319
 msgid "Projects"
 msgstr "プロジェクト"
 
@@ -75,19 +75,19 @@ msgstr "プロジェクト"
 msgid "Save"
 msgstr "保存"
 
-#: src/app/issues-list-edit-form.js:328
+#: src/app/issues-list-edit-form.js:331
 msgid "Saved searches"
 msgstr "保存した検索条件"
 
-#: src/app/issues-list-edit-form.js:395
+#: src/app/issues-list-edit-form.js:398
 msgid "Select YouTrack"
 msgstr "YouTrackを選択"
 
-#: src/app/issues-list-edit-form.js:98
+#: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
 msgstr "選択されたYouTrackサービスはご利用いただけません"
 
-#: src/app/issues-list-edit-form.js:381
+#: src/app/issues-list-edit-form.js:384
 msgid "Set optional title"
 msgstr "タイトル（省略可）を設定"
 
@@ -99,11 +99,11 @@ msgstr "日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "日|月|火|水|木|金|土"
 
-#: src/app/issues-list-edit-form.js:322
+#: src/app/issues-list-edit-form.js:325
 msgid "Tags"
 msgstr "タグ"
 
-#: src/app/issues-list-edit-form.js:303
+#: src/app/issues-list-edit-form.js:306
 msgid "Type search query"
 msgstr "検索クエリを入力"
 
