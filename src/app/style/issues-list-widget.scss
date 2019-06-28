@@ -114,6 +114,10 @@
     font-size: var(--ring-font-size-smaller);
   }
 
+  &__fields-fix {
+    padding-right: 4px !important;
+  }
+
   &__field-row {
     display: table-row-group;
   }

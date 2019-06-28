@@ -184,9 +184,10 @@ class IssueLine extends React.Component {
     );
   }
 
-  renderFields(issueFields) {
+  renderFields(issueFields, fixed) {
+    const fixClassName = fixed ? 'issues-list-widget__fields-fix' : '';
     return (
-      <div className="issues-list-widget__fields">
+      <div className={`issues-list-widget__fields ${fixClassName}`}>
         {
           issueFields.map(issueField => (
             <div
@@ -246,7 +247,7 @@ class IssueLine extends React.Component {
             style={coloredSquare.style}
           >
             <Tooltip
-              title={this.renderFields([coloredSquare.issueField])}
+              title={this.renderFields([coloredSquare.issueField], true)}
             >
               {coloredSquare.letter}
             </Tooltip>
