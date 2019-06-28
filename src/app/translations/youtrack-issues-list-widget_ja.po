@@ -8,10 +8,10 @@ msgstr ""
 "X-Crowdin-Project: youtrackjetbrains\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
-"Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
+"Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-03-14 19:44\n"
+"PO-Revision-Date: 2019-06-28 10:40\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
