@@ -13,6 +13,7 @@ import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form'
 import '@jetbrains/ring-ui/components/form/form.scss';
 
 import ServiceResource from './components/service-resource';
+import DebounceDecorator from './debounceDecorator';
 import {
   underlineAndSuggest,
   loadIssues,
@@ -60,6 +61,7 @@ class IssuesListEditForm extends React.Component {
       youTracks: [selectedYouTrack],
       filtersType: IssuesListEditForm.FILTERS_TYPES.PROJECTS
     };
+    this.underlineAndSuggestDebouncer = new DebounceDecorator();
   }
 
   componentDidMount() {
@@ -162,7 +164,8 @@ class IssuesListEditForm extends React.Component {
   };
 
   underlineAndSuggest = async (query, caret, folder) =>
-    await underlineAndSuggest(this.fetchYouTrack, query, caret, folder);
+    // eslint-disable-next-line max-len
+    this.underlineAndSuggestDebouncer.decorate(() => underlineAndSuggest(this.fetchYouTrack, query, caret, folder));
 
   queryAssistDataSource = async queryAssistModel =>
     await this.underlineAndSuggest(
