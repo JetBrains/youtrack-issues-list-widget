@@ -2,12 +2,14 @@ const PROJECT_CUSTOM_FIELD_FIELDS = 'id,bundle(id),field(id,name,localizedName,f
 const ISSUE_FIELD_VALUE_FIELDS = 'id,name,localizedName,login,avatarUrl,name,presentation,minutes,color(id,foreground,background)';
 const ISSUE_FIELD_FIELDS = `id,value(${ISSUE_FIELD_VALUE_FIELDS}),projectCustomField(${PROJECT_CUSTOM_FIELD_FIELDS})`;
 const ISSUE_FIELDS = `id,idReadable,summary,resolved,fields(${ISSUE_FIELD_FIELDS})`;
+const NODES_FIELDS = 'tree(id,ordered)';
 
 const QUERY_ASSIST_FIELDS = 'query,caret,styleRanges(start,length,style),suggestions(options,prefix,option,suffix,description,matchingStart,matchingEnd,caret,completionStart,completionEnd,group,icon)';
 const WATCH_FOLDERS_FIELDS = 'id,$type,name,query,shortName';
 
 const DATE_PRESENTATION_SETTINGS = 'id,dateFieldFormat(pattern,datePattern)';
 
+// eslint-disable-next-line complexity
 export async function loadIssues(fetchYouTrack, query, context, skip) {
   const packSize = 50;
   const encodedQuery = encodeURIComponent(query);
@@ -16,8 +18,20 @@ export async function loadIssues(fetchYouTrack, query, context, skip) {
       `api/issueFolders/${context.id}/sortOrder/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${packSize}&$skip=${skip || 0}`
     );
   }
+  let sortedNodes = {};
+  try {
+    sortedNodes = await fetchYouTrack(
+      `api/sortedIssues?fields=${NODES_FIELDS}&query=${encodedQuery}&topRoot=${packSize}&skipRoot=${skip || 0}&flatten=true`
+    );
+  } catch (e) {
+    return await fetchYouTrack(`api/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${packSize}&$skip=${skip || 0}`);
+  }
+
   return await fetchYouTrack(
-    `api/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${packSize}&$skip=${skip || 0}`
+    `api/issuesGetter?$top=-1&fields=${ISSUE_FIELDS}`, {
+      method: 'POST',
+      body: (sortedNodes.tree || []).map(node => ({id: node.id}))
+    }
   );
 }
 
