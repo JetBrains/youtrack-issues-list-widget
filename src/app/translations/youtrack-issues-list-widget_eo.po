@@ -5,124 +5,124 @@ msgstr ""
 "Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
-"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-Language: eo\n"
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
-"PO-Revision-Date: 2020-01-14 21:03\n"
+"Language-Team: Esperanto\n"
+"Language: eo_UY\n"
+"PO-Revision-Date: 2019-12-20 15:00\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
-msgstr "No es posible cargar información desde el servicio."
+msgstr "crwdns894670:0crwdne894670:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "crwdns894671:0crwdne894671:0"
 
 #: src/app/content.js:50
 msgid "Edit search query"
-msgstr "Editar la consulta de búsqueda"
+msgstr "crwdns894672:0crwdne894672:0"
 
 #: src/app/issues-list-edit-form.js:300
 #: src/app/issues-list-edit-form.js:35
 msgid "Everything"
-msgstr "Todo"
+msgstr "crwdns894673:0crwdne894673:0"
 
 #: src/app/issues-list-widget.js:66
 msgid "Issues List"
-msgstr "Lista de incidencias"
+msgstr "crwdns1448748:0crwdne1448748:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre"
+msgstr "crwdns894674:0crwdne894674:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic"
+msgstr "crwdns894675:0crwdne894675:0"
 
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] "Cargar 1 incidencia más"
-msgstr[1] "Cargar {{$count}} incidencias más"
+msgstr[0] "crwdns1449322:1crwdne1449322:1"
+msgstr[1] "crwdns1449322:5{{$count}}crwdne1449322:5"
 
 #: src/app/content.js:41
 msgid "No issues found"
-msgstr "No se ha encontrado ninguna incidencia."
+msgstr "crwdns894678:0crwdne894678:0"
 
 #: src/app/issues-list-edit-form.js:226
 msgid "No projects"
-msgstr "Ningún proyecto"
+msgstr "crwdns894679:0crwdne894679:0"
 
 #: src/app/issues-list-edit-form.js:228
 msgid "No saved searches"
-msgstr "Ninguna búsqueda guardada"
+msgstr "crwdns894680:0crwdne894680:0"
 
 #: src/app/issues-list-edit-form.js:227
 msgid "No tags"
-msgstr "Ninguna etiqueta"
+msgstr "crwdns894681:0crwdne894681:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "¡Uy! Algo ha salido mal..."
+msgstr "crwdns894682:0crwdne894682:0"
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
-msgstr "Proyectos"
+msgstr "crwdns894683:0crwdne894683:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
 msgid "Save"
-msgstr "Guardar"
+msgstr "crwdns894684:0crwdne894684:0"
 
 #: src/app/issues-list-edit-form.js:331
 msgid "Saved searches"
-msgstr "Búsquedas guardadas"
+msgstr "crwdns894685:0crwdne894685:0"
 
 #: src/app/issues-list-edit-form.js:398
 msgid "Select YouTrack"
-msgstr "Seleccionar YouTrack"
+msgstr "crwdns894686:0crwdne894686:0"
 
 #: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
-msgstr "El servicio de YouTrack seleccionado no está disponible"
+msgstr "crwdns894687:0crwdne894687:0"
 
 #: src/app/issues-list-edit-form.js:384
 msgid "Set optional title"
-msgstr "Establecer título opcional"
+msgstr "crwdns894688:0crwdne894688:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado"
+msgstr "crwdns894689:0crwdne894689:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "Dom|Lun|Mar|Mié|Jue|Vie|Sáb"
+msgstr "crwdns894690:0crwdne894690:0"
 
 #: src/app/issues-list-edit-form.js:325
 msgid "Tags"
-msgstr "Etiquetas"
+msgstr "crwdns894691:0crwdne894691:0"
 
 #: src/app/issues-list-edit-form.js:306
 msgid "Type search query"
-msgstr "Escriba la consulta de búsqueda"
+msgstr "crwdns894692:0crwdne894692:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "El widget se actualiza cada minuto"
+msgstr "crwdns894693:0crwdne894693:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "El widget se actualiza cada {{minutesCount}} minutos"
+msgstr "crwdns894694:0{{minutesCount}}crwdne894694:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "a. m. |p. m."
+msgstr "crwdns894695:0crwdne894695:0"
 
 #: src/app/issues-list-widget.js:46
 msgid "issues"
-msgstr "incidencias"
+msgstr "crwdns894696:0crwdne894696:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr "{{minutesCount}} min"
+msgstr "crwdns894697:0{{minutesCount}}crwdne894697:0"
 
