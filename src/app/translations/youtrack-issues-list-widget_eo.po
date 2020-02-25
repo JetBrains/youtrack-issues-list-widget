@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2019-12-20 15:00\n"
+"PO-Revision-Date: 2020-02-25 17:31\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -28,7 +28,7 @@ msgstr "crwdns894672:0crwdne894672:0"
 msgid "Everything"
 msgstr "crwdns894673:0crwdne894673:0"
 
-#: src/app/issues-list-widget.js:66
+#: src/app/issues-list-widget.js:68
 msgid "Issues List"
 msgstr "crwdns1448748:0crwdne1448748:0"
 
@@ -118,7 +118,7 @@ msgstr "crwdns894694:0{{minutesCount}}crwdne894694:0"
 msgid "am|pm"
 msgstr "crwdns894695:0crwdne894695:0"
 
-#: src/app/issues-list-widget.js:46
+#: src/app/issues-list-widget.js:48
 msgid "issues"
 msgstr "crwdns894696:0crwdne894696:0"
 
