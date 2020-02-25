@@ -9,22 +9,23 @@ const WATCH_FOLDERS_FIELDS = 'id,$type,name,query,shortName';
 
 const DATE_PRESENTATION_SETTINGS = 'id,dateFieldFormat(pattern,datePattern)';
 
+export const ISSUES_PACK_SIZE = 50;
+
 // eslint-disable-next-line complexity
 export async function loadIssues(fetchYouTrack, query, context, skip) {
-  const packSize = 50;
   const encodedQuery = encodeURIComponent(query);
   if (context && context.id) {
     return await fetchYouTrack(
-      `api/issueFolders/${context.id}/sortOrder/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${packSize}&$skip=${skip || 0}`
+      `api/issueFolders/${context.id}/sortOrder/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${ISSUES_PACK_SIZE}&$skip=${skip || 0}`
     );
   }
   let sortedNodes = {};
   try {
     sortedNodes = await fetchYouTrack(
-      `api/sortedIssues?fields=${NODES_FIELDS}&query=${encodedQuery}&topRoot=${packSize}&skipRoot=${skip || 0}&flatten=true`
+      `api/sortedIssues?fields=${NODES_FIELDS}&query=${encodedQuery}&topRoot=${ISSUES_PACK_SIZE}&skipRoot=${skip || 0}&flatten=true`
     );
   } catch (e) {
-    return await fetchYouTrack(`api/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${packSize}&$skip=${skip || 0}`);
+    return await fetchYouTrack(`api/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${ISSUES_PACK_SIZE}&$skip=${skip || 0}`);
   }
 
   return await fetchYouTrack(
@@ -39,20 +40,18 @@ export async function loadTotalIssuesCount(
   fetchYouTrack, issue, query, context
 ) {
   const searchPage = await fetchYouTrack(
-    'api/searchPage?fields=total', {
+    'api/issuesGetter/count?fields=count', {
       method: 'POST',
       body: {
-        pageSize: 0,
         folder: context && context.id && {
-          id: context.id,
-          $type: context.$type
-        },
-        query,
-        issue: {id: issue.id}
+          $type: context.$type,
+          id: context.id
+        } || null,
+        query: query || null
       }
     }
   );
-  return searchPage && searchPage.total;
+  return searchPage && searchPage.count;
 }
 
 export async function loadPinnedIssueFolders(fetchYouTrack, loadAll) {

@@ -4,7 +4,9 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import ConfigurableWidget from '@jetbrains/hub-widget-ui/dist/configurable-widget';
 
 import ServiceResource from './components/service-resource';
-import {loadDateFormats, loadIssues, loadTotalIssuesCount} from './resources';
+import {
+  loadDateFormats, loadIssues, loadTotalIssuesCount, ISSUES_PACK_SIZE
+} from './resources';
 import IssuesListEditForm from './issues-list-edit-form';
 
 import './style/issues-list-widget.scss';
@@ -318,12 +320,25 @@ class IssuesListWidget extends React.Component {
   };
 
   loadIssuesCount = async (issues, search, context) => {
-    const issuesCount = issues.length
+    if (this.previousLoadIntervalDescriptor) {
+      clearInterval(this.previousLoadIntervalDescriptor);
+      this.previousLoadIntervalDescriptor = null;
+    }
+
+    const issuesCount = (issues.length && issues.length >= ISSUES_PACK_SIZE)
       ? await loadTotalIssuesCount(
         this.fetchYouTrack, issues[0], search, context
       )
-      : 0;
+      : (issues.length || 0);
+
     this.setState({issuesCount});
+
+    if (issuesCount === -1) {
+      this.previousLoadIntervalDescriptor = setInterval(
+        () => this.loadIssuesCount(issues, search, context),
+        IssuesListWidget.DEFAULT_REFRESH_PERIOD
+      );
+    }
   };
 
   getLoadMoreCount() {
