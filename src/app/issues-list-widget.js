@@ -15,6 +15,7 @@ import Content from './content';
 class IssuesListWidget extends React.Component {
 
   static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
+  static COUNTER_POLLING_PERIOD = 6000; // eslint-disable-line no-magic-numbers
 
   static digitToUnicodeSuperScriptDigit = digitSymbol => {
     const unicodeSuperscriptDigits = [
@@ -70,7 +71,7 @@ class IssuesListWidget extends React.Component {
   static getWidgetTitle = (search, context, title, issuesCount, youTrack) => {
     let displayedTitle =
       title || IssuesListWidget.getFullSearchPresentation(context, search);
-    if (issuesCount) {
+    if (issuesCount > 0) {
       const superScriptIssuesCount = `${issuesCount}`.split('').
         map(IssuesListWidget.digitToUnicodeSuperScriptDigit).join('');
       displayedTitle += ` ${superScriptIssuesCount}`;
@@ -336,7 +337,7 @@ class IssuesListWidget extends React.Component {
     if (issuesCount === -1) {
       this.previousLoadIntervalDescriptor = setInterval(
         () => this.loadIssuesCount(issues, search, context),
-        IssuesListWidget.DEFAULT_REFRESH_PERIOD
+        IssuesListWidget.COUNTER_POLLING_PERIOD
       );
     }
   };

@@ -25,7 +25,7 @@ export async function loadIssues(fetchYouTrack, query, context, skip) {
       `api/sortedIssues?fields=${NODES_FIELDS}&query=${encodedQuery}&topRoot=${ISSUES_PACK_SIZE}&skipRoot=${skip || 0}&flatten=true`
     );
   } catch (e) {
-    return await fetchYouTrack(`api/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${ISSUES_PACK_SIZE}&$skip=${skip || 0}`);
+    return [];
   }
 
   return await fetchYouTrack(
