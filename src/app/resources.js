@@ -19,15 +19,10 @@ export async function loadIssues(fetchYouTrack, query, context, skip) {
       `api/issueFolders/${context.id}/sortOrder/issues?fields=${ISSUE_FIELDS}&query=${encodedQuery}&$top=${ISSUES_PACK_SIZE}&$skip=${skip || 0}`
     );
   }
-  let sortedNodes = {};
-  try {
-    sortedNodes = await fetchYouTrack(
-      `api/sortedIssues?fields=${NODES_FIELDS}&query=${encodedQuery}&topRoot=${ISSUES_PACK_SIZE}&skipRoot=${skip || 0}&flatten=true`
-    );
-  } catch (e) {
-    return [];
-  }
 
+  const sortedNodes = await fetchYouTrack(
+    `api/sortedIssues?fields=${NODES_FIELDS}&query=${encodedQuery}&topRoot=${ISSUES_PACK_SIZE}&skipRoot=${skip || 0}&flatten=true`
+  );
   return await fetchYouTrack(
     `api/issuesGetter?$top=-1&fields=${ISSUE_FIELDS}`, {
       method: 'POST',
