@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-02-25 17:29\n"
+"PO-Revision-Date: 2020-02-27 15:44\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -28,7 +28,7 @@ msgstr "検索クエリの編集"
 msgid "Everything"
 msgstr "すべて"
 
-#: src/app/issues-list-widget.js:68
+#: src/app/issues-list-widget.js:69
 msgid "Issues List"
 msgstr "課題リスト"
 
@@ -117,7 +117,7 @@ msgstr "ウィジェットは{{minutesCount}}分ごとに更新されます"
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/issues-list-widget.js:48
+#: src/app/issues-list-widget.js:49
 msgid "issues"
 msgstr "課題"
 

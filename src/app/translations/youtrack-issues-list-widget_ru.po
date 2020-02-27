@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2020-02-25 17:29\n"
+"PO-Revision-Date: 2020-02-27 15:44\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -28,7 +28,7 @@ msgstr "Редактировать поисковый запрос"
 msgid "Everything"
 msgstr "Все"
 
-#: src/app/issues-list-widget.js:68
+#: src/app/issues-list-widget.js:69
 msgid "Issues List"
 msgstr "Список задач"
 
@@ -120,7 +120,7 @@ msgstr "Виджет обновляется раз в {{minutesCount}} мин"
 msgid "am|pm"
 msgstr "ДП|ПП"
 
-#: src/app/issues-list-widget.js:48
+#: src/app/issues-list-widget.js:49
 msgid "issues"
 msgstr "задачи"
 

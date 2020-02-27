@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2020-02-25 17:30\n"
+"PO-Revision-Date: 2020-02-27 15:44\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service."
@@ -28,7 +28,7 @@ msgstr "Editar la consulta de búsqueda"
 msgid "Everything"
 msgstr "Todo"
 
-#: src/app/issues-list-widget.js:68
+#: src/app/issues-list-widget.js:69
 msgid "Issues List"
 msgstr "Lista de incidencias"
 
@@ -118,7 +118,7 @@ msgstr "El widget se actualiza cada {{minutesCount}} minutos"
 msgid "am|pm"
 msgstr "a. m. |p. m."
 
-#: src/app/issues-list-widget.js:48
+#: src/app/issues-list-widget.js:49
 msgid "issues"
 msgstr "incidencias"
 
