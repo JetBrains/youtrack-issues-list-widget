@@ -263,6 +263,7 @@ class IssueLine extends React.Component {
               getIssueLinkClassName('issues-list-widget__issue-id')
             }
             href={`${homeUrl}/issue/${issue.idReadable}`}
+            target="_blank"
           >
             {issue.idReadable}
           </Link>
@@ -272,6 +273,7 @@ class IssueLine extends React.Component {
               getIssueLinkClassName('issues-list-widget__issue-summary')
             }
             href={`${homeUrl}/issue/${issue.idReadable}`}
+            target="_blank"
           >
             {issue.summary}
           </Link>
