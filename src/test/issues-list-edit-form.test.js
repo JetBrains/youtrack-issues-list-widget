@@ -2,10 +2,9 @@ import 'babel-polyfill';
 import {mount} from 'enzyme';
 import React from 'react';
 import chai from 'chai';
-import {setLocale} from 'hub-dashboard-addons/dist/localization';
 
 import IssuesListEditForm from '../app/issues-list-edit-form';
-import TRANSLATIONS from '../app/translations';
+import {initTranslations} from '../app/translations';
 
 import {getDashboardApiMock} from './mocks';
 
@@ -65,7 +64,7 @@ describe('IssuesListEditForm', () => {
 
     (cancelButton.text().trim()).should.be.equal('Cancel');
 
-    setLocale('ru', TRANSLATIONS);
+    initTranslations('ru');
     cancelButton = mountIssueListEditForm().
       find('button[data-test="cancel-button"]');
 

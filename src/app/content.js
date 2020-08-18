@@ -59,7 +59,7 @@ class Content extends React.Component {
     return (
       <EmptyWidget
         face={EmptyWidgetFaces.ERROR}
-        message={i18n('Can\'t load information from service.')}
+        message={i18n('Can\'t load information from service')}
       />
     );
   }

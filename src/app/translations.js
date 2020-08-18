@@ -1,13 +1,21 @@
-import de from './translations/youtrack-issues-list-widget_de.po';
-import es from './translations/youtrack-issues-list-widget_es.po';
-import fr from './translations/youtrack-issues-list-widget_fr.po';
-import ru from './translations/youtrack-issues-list-widget_ru.po';
-import ja from './translations/youtrack-issues-list-widget_ja.po';
+import {setLocale} from 'hub-dashboard-addons/dist/localization';
 
-export default {
-  de: de.de_DE,
-  es: es.es_ES,
-  fr: fr.fr_FR,
-  ru: ru.ru_RU,
-  ja: ja.ja_JP
-};
+const translationFiles = require.context('./translations/', true, /\.po$/);
+
+const translations = translationFiles.keys().
+  reduce((result, fileKey) => {
+    const lang = fileKey.split('.po')[0].split('_')[1];
+    const fileJson = translationFiles(fileKey);
+    result[lang] = Object.keys(fileJson).
+      reduce((accumulator, propertyKey) => {
+        accumulator = {...accumulator, ...fileJson[propertyKey]}
+        return accumulator;
+      }, {});
+    return result;
+  }, {});
+
+export function initTranslations(locale) {
+  if (translations[locale]) {
+    setLocale(locale, translations);
+  }
+}
