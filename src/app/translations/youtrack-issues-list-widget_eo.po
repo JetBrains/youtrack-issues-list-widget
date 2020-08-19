@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2020-06-12 21:03\n"
+"PO-Revision-Date: 2020-08-19 10:19\n"
 
 #: src/app/content.js:62
-msgid "Can't load information from service."
-msgstr "crwdns894670:0crwdne894670:0"
+msgid "Can't load information from service"
+msgstr "crwdns10855694:0crwdne10855694:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
