@@ -8,7 +8,7 @@ import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
 
 import IssueLine from './issue-line';
 
-import './style/issues-list-widget.scss';
+import './style/issues-list-widget.css';
 
 class Content extends React.Component {
 

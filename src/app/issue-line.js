@@ -9,7 +9,7 @@ import {
   ChevronDownIcon
 } from '@jetbrains/ring-ui/components/icon';
 
-import './style/issues-list-widget.scss';
+import './style/issues-list-widget.css';
 
 class IssueLine extends React.Component {
 

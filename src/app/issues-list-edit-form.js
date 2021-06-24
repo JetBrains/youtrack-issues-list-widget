@@ -19,7 +19,7 @@ import {
   loadIssues,
   loadPinnedIssueFolders
 } from './resources';
-import './style/issues-list-widget.scss';
+import './style/issues-list-widget.css';
 
 const MIN_YOUTRACK_VERSION = '2017.4.38723';
 

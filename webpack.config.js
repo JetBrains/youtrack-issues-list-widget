@@ -33,19 +33,17 @@ const webpackConfig = () => ({
     rules: [
       ...ringUiWebpackConfig.config.module.rules,
       {
-        test: /\.scss$/,
-        include: componentsPath,
-        use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.css$/,
-        exclude: [componentsPath, ringUiWebpackConfig.componentsPath],
-        use: ['style-loader', 'css-loader']
+        exclude: [ringUiWebpackConfig.componentsPath],
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: {
+              auto: true,
+              localIdentName: '[local]_[hash:3]'
+            }
+          }
+        }]
       },
       {
         test: /\.js$/,

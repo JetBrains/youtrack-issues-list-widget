@@ -9,7 +9,7 @@ import {
 } from './resources';
 import IssuesListEditForm from './issues-list-edit-form';
 
-import './style/issues-list-widget.scss';
+import './style/issues-list-widget.css';
 import Content from './content';
 
 class IssuesListWidget extends React.Component {
