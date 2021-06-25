@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-08-21 21:14\n"
+"PO-Revision-Date: 2021-06-25 13:30\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
-msgstr ""
+msgstr "サービスから情報を読み込むことができません"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
@@ -30,7 +30,7 @@ msgstr "検索クエリの編集"
 msgid "Everything"
 msgstr "すべて"
 
-#: src/app/issues-list-widget.js:69
+#: src/app/issues-list-widget.js:65
 msgid "Issues List"
 msgstr "課題リスト"
 

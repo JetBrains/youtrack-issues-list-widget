@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2020-08-19 21:04\n"
+"PO-Revision-Date: 2021-06-25 13:32\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
-msgstr ""
+msgstr "无法从服务加载信息"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
@@ -30,9 +30,9 @@ msgstr "编辑搜索查询"
 msgid "Everything"
 msgstr "所有"
 
-#: src/app/issues-list-widget.js:69
+#: src/app/issues-list-widget.js:65
 msgid "Issues List"
-msgstr ""
+msgstr "问题列表"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -45,7 +45,7 @@ msgstr "1 月|2 月|3 月|4 月|5 月|6 月|7 月|8 月|9 月|10 月|11 月|12 �
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
+msgstr[0] "加载其他 {{$count}} 个问题"
 
 #: src/app/content.js:41
 msgid "No issues found"
@@ -65,7 +65,7 @@ msgstr "没有标签"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "哎呀，出了些问题..."
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
@@ -113,7 +113,7 @@ msgstr "微件每分钟刷新一次"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "微件每 {{minutesCount}} 分钟刷新一次"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -125,5 +125,5 @@ msgstr "问题"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} 分钟"
 

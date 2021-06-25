@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2020-08-19 21:04\n"
+"PO-Revision-Date: 2021-06-25 13:34\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
-msgstr ""
+msgstr "Não é possível carregar informações do serviço"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
@@ -30,9 +30,9 @@ msgstr "Editar pesquisa"
 msgid "Everything"
 msgstr "Tudo"
 
-#: src/app/issues-list-widget.js:69
+#: src/app/issues-list-widget.js:65
 msgid "Issues List"
-msgstr ""
+msgstr "Lista de Issues"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -114,7 +114,7 @@ msgstr "Widget atualiza a cada minuto"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "Widget atualiza a cada {{minutesCount}} minutos"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -126,5 +126,5 @@ msgstr "issues"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} minutos"
 
