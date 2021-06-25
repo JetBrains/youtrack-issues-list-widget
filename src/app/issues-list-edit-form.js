@@ -77,14 +77,12 @@ class IssuesListEditForm extends React.Component {
   }
 
   async loadYouTrackList() {
-    debugger;
     const {selectedYouTrack} = this.state;
     const youTracks = await ServiceResource.getYouTrackServices(
       this.props.dashboardApi, MIN_YOUTRACK_VERSION
     );
     const selectedYouTrackWithAllFields = youTracks.
       filter(yt => yt.id === selectedYouTrack.id)[0];
-    debugger;
     this.setState({
       youTracks, selectedYouTrack: selectedYouTrackWithAllFields
     });
