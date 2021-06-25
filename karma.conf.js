@@ -30,7 +30,7 @@ module.exports = config => {
       './test-bundler.js': ['webpack', 'sourcemap']
     },
 
-    webpack: Object.assign({}, require('./webpack.config.js')(), {
+    webpack: Object.assign({}, require('./webpack.config')(), {
       devtool: 'inline-source-map',
       entry: null,
       externals: {
