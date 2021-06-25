@@ -10,9 +10,9 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import HttpErrorHandler from '@jetbrains/hub-widget-ui/dist/http-error-handler';
 import RefreshPeriod from '@jetbrains/hub-widget-ui/dist/refresh-period';
 import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form';
+import ServiceResources from '@jetbrains/hub-widget-ui/dist/service-resources';
 import '@jetbrains/ring-ui/components/form/form.scss';
 
-import ServiceResource from './components/service-resource';
 import DebounceDecorator from './debounceDecorator';
 import {
   underlineAndSuggest,
@@ -78,7 +78,7 @@ class IssuesListEditForm extends React.Component {
 
   async loadYouTrackList() {
     const {selectedYouTrack} = this.state;
-    const youTracks = await ServiceResource.getYouTrackServices(
+    const youTracks = await ServiceResources.getYouTrackServices(
       this.props.dashboardApi, MIN_YOUTRACK_VERSION
     );
     const selectedYouTrackWithAllFields = youTracks.

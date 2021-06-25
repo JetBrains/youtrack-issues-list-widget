@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import ConfigurableWidget from '@jetbrains/hub-widget-ui/dist/configurable-widget';
+import ServiceResources from '@jetbrains/hub-widget-ui/dist/service-resources';
 
-import ServiceResource from './components/service-resource';
 import {
   loadDateFormats, loadIssues, loadTotalIssuesCount, ISSUES_PACK_SIZE
 } from './resources';
@@ -51,7 +51,7 @@ class IssuesListWidget extends React.Component {
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
       try {
-        return await ServiceResource.getYouTrackService(
+        return await ServiceResources.getYouTrackService(
           dashboardApi, predefinedYouTrack && predefinedYouTrack.id
         );
       } catch (err) {
@@ -188,7 +188,7 @@ class IssuesListWidget extends React.Component {
 
     if (IssuesListWidget.youTrackServiceNeedsUpdate(youTrackService)) {
       const {dashboardApi} = this.props;
-      ServiceResource.getYouTrackService(
+      ServiceResources.getYouTrackService(
         dashboardApi, youTrackService.id
       ).then(
         updatedYouTrackService => {

@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@jetbrains/babel-preset-jetbrains": "1.0.1",
-    "@jetbrains/hub-widget-ui": "1.0.32",
+    "@jetbrains/hub-widget-ui": "^1.0.44",
     "@jetbrains/icons": "1.12.0",
     "@jetbrains/logos": "0.1.6",
     "@jetbrains/ring-ui": "1.0.35",
@@ -51,7 +51,6 @@
   },
   "devDependencies": {
     "@jetbrains/eslint-config": "^4.0.3",
-    "@jetbrains/hub-widget-ui": "1.0.31",
     "@jetbrains/generator-ring-ui": "0.4.5",
     "@jetbrains/stylelint-config": "^1.3.4",
     "babel-eslint": "^10.0.1",
