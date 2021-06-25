@@ -50,13 +50,9 @@ class IssuesListWidget extends React.Component {
 
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
-      if (predefinedYouTrack && predefinedYouTrack.id) {
-        return predefinedYouTrack;
-      }
       try {
-        // TODO: pass min-required version here
         return await ServiceResource.getYouTrackService(
-          dashboardApi.fetchHub.bind(dashboardApi)
+          dashboardApi, predefinedYouTrack && predefinedYouTrack.id
         );
       } catch (err) {
         return null;
@@ -193,8 +189,7 @@ class IssuesListWidget extends React.Component {
     if (IssuesListWidget.youTrackServiceNeedsUpdate(youTrackService)) {
       const {dashboardApi} = this.props;
       ServiceResource.getYouTrackService(
-        dashboardApi.fetchHub.bind(dashboardApi),
-        youTrackService.id
+        dashboardApi, youTrackService.id
       ).then(
         updatedYouTrackService => {
           const shouldReSetYouTrack = updatedYouTrackService &&

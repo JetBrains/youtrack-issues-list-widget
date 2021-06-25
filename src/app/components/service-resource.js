@@ -1,8 +1,13 @@
 const SERVICE_FIELDS = 'id,name,applicationName,homeUrl,version';
 
 
-async function getYouTrackServices(fetchHub, optionalMinYouTrackVersion) {
-  const data = await fetchHub(`api/rest/services?fields=${SERVICE_FIELDS}&query=applicationName:YouTrack`);
+async function getYouTrackServices(dashboardApi, optionalMinYouTrackVersion) {
+  if (dashboardApi.loadServices) {
+    return await dashboardApi.loadServices('YouTrack');
+  }
+
+  const data = await dashboardApi.fetchHub(`api/rest/services?fields=${SERVICE_FIELDS}&query=applicationName:YouTrack`);
+
   return (data && data.services || []).filter(
     service => !!service.homeUrl && (!optionalMinYouTrackVersion ||
       satisfyingVersion(service.version, optionalMinYouTrackVersion))
@@ -29,8 +34,8 @@ async function getYouTrackServices(fetchHub, optionalMinYouTrackVersion) {
   }
 }
 
-async function getYouTrackService(fetchHub, optionalYtId) {
-  let services = await getYouTrackServices(fetchHub);
+async function getYouTrackService(dashboardApi, optionalYtId) {
+  let services = await getYouTrackServices(dashboardApi);
   if (optionalYtId) {
     services = services.filter(service => service.id === optionalYtId);
   }
