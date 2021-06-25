@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2021-06-25 13:30\n"
+"PO-Revision-Date: 2021-06-25 13:41\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
 msgstr "Daten aus Service können nicht geladen werden"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -72,7 +72,7 @@ msgstr "Entschuldigung! Etwas ist schiefgegangen."
 msgid "Projects"
 msgstr "Projekte"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "Speichern"
 

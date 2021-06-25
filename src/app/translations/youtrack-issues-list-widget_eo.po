@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2021-06-25 13:31\n"
+"PO-Revision-Date: 2021-06-25 13:41\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
 msgstr "crwdns10855694:0crwdne10855694:0"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "crwdns894671:0crwdne894671:0"
 
@@ -72,7 +72,7 @@ msgstr "crwdns894682:0crwdne894682:0"
 msgid "Projects"
 msgstr "crwdns894683:0crwdne894683:0"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "crwdns894684:0crwdne894684:0"
 

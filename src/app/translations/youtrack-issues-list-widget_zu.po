@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Zulu\n"
 "Language: zu_ZA\n"
-"PO-Revision-Date: 2021-06-25 13:35\n"
+"PO-Revision-Date: 2021-06-25 13:42\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
 msgstr "crwdns10855712:0crwdne10855712:0"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "crwdns10855714:0crwdne10855714:0"
 
@@ -72,7 +72,7 @@ msgstr "crwdns10855736:0crwdne10855736:0"
 msgid "Projects"
 msgstr "crwdns10855738:0crwdne10855738:0"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "crwdns10855740:0crwdne10855740:0"
 

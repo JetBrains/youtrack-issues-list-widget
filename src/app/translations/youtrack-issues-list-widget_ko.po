@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2021-06-25 13:34\n"
+"PO-Revision-Date: 2021-06-25 13:42\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
 msgstr "서비스에서 정보를 불러올 수 없습니다"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "취소"
 
@@ -71,7 +71,7 @@ msgstr "죄송합니다. 오류가 발생했습니다."
 msgid "Projects"
 msgstr "프로젝트"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "저장"
 

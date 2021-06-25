@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2021-06-25 13:32\n"
+"PO-Revision-Date: 2021-06-25 13:42\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
 msgstr "Nelze načíst data ze serveru"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -74,7 +74,7 @@ msgstr "Jejda! Něco se pokazilo…"
 msgid "Projects"
 msgstr "Projekty"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "Uložit"
 

@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2021-06-25 13:34\n"
+"PO-Revision-Date: 2021-06-25 13:42\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
 msgstr ""
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr ""
 
