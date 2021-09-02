@@ -14,8 +14,8 @@ import Content from './content';
 
 class IssuesListWidget extends React.Component {
 
-  static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
-  static COUNTER_POLLING_PERIOD = 6000; // eslint-disable-line no-magic-numbers
+  static COUNTER_POLLING_PERIOD_SEC = 240; // eslint-disable-line no-magic-numbers
+  static COUNTER_POLLING_PERIOD_MLS = 60000; // eslint-disable-line no-magic-numbers
 
   static digitToUnicodeSuperScriptDigit = digitSymbol => {
     const unicodeSuperscriptDigits = [
@@ -152,7 +152,7 @@ class IssuesListWidget extends React.Component {
       title,
       search: search || '',
       context,
-      refreshPeriod: refreshPeriod || IssuesListWidget.DEFAULT_REFRESH_PERIOD
+      refreshPeriod: refreshPeriod || IssuesListWidget.COUNTER_POLLING_PERIOD_SEC
     });
     await this.showListFromCache(search, context);
 
@@ -316,11 +316,6 @@ class IssuesListWidget extends React.Component {
   };
 
   loadIssuesCount = async (issues, search, context) => {
-    if (this.previousLoadIntervalDescriptor) {
-      clearInterval(this.previousLoadIntervalDescriptor);
-      this.previousLoadIntervalDescriptor = null;
-    }
-
     const issuesCount = (issues.length && issues.length >= ISSUES_PACK_SIZE)
       ? await loadTotalIssuesCount(
         this.fetchYouTrack, issues[0], search, context
@@ -330,9 +325,9 @@ class IssuesListWidget extends React.Component {
     this.setState({issuesCount});
 
     if (issuesCount === -1) {
-      this.previousLoadIntervalDescriptor = setInterval(
+      setTimeout(
         () => this.loadIssuesCount(issues, search, context),
-        IssuesListWidget.COUNTER_POLLING_PERIOD
+        IssuesListWidget.COUNTER_POLLING_PERIOD_MLS
       );
     }
   };
