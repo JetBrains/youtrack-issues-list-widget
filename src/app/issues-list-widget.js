@@ -152,7 +152,8 @@ class IssuesListWidget extends React.Component {
       title,
       search: search || '',
       context,
-      refreshPeriod: refreshPeriod || IssuesListWidget.COUNTER_POLLING_PERIOD_SEC
+      refreshPeriod:
+        refreshPeriod || IssuesListWidget.COUNTER_POLLING_PERIOD_SEC
     });
     await this.showListFromCache(search, context);
 
