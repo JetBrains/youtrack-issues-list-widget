@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrack-custom-localization\n"
+"Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: youtrack-custom-localization\n"
-"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
-"X-Crowdin-File-ID: 241498\n"
+"X-Crowdin-File-ID: 33626\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2021-06-25 13:42\n"
+"PO-Revision-Date: 2021-09-03 12:51\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -81,11 +81,11 @@ msgstr "保存的搜索"
 
 #: src/app/issues-list-edit-form.js:398
 msgid "Select YouTrack"
-msgstr "选择 YoutTrack"
+msgstr "选择 YouTrack"
 
 #: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
-msgstr "选择的 YoutTrack 服务不可用"
+msgstr "选定的 YouTrack 服务不可用"
 
 #: src/app/issues-list-edit-form.js:384
 msgid "Set optional title"

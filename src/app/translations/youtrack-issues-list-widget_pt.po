@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrack-custom-localization\n"
+"Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: youtrack-custom-localization\n"
-"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: pt-BR\n"
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
-"X-Crowdin-File-ID: 241498\n"
+"X-Crowdin-File-ID: 33626\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2021-06-25 13:42\n"
+"PO-Revision-Date: 2021-09-03 12:54\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -45,12 +45,12 @@ msgstr "Jan|Fev|Mar|Abr|Maio|Jun|Jul|Ago|Set|Out|Nov|Dez"
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Carregar mais uma issue"
+msgstr[1] "Carregar mais {{$count}} issues"
 
 #: src/app/content.js:41
 msgid "No issues found"
-msgstr "Nenhuma issue encontrado"
+msgstr "Nenhuma issue encontrada"
 
 #: src/app/issues-list-edit-form.js:226
 msgid "No projects"
@@ -66,7 +66,7 @@ msgstr "Nenhuma tag"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "Oops! Algo deu errado..."
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
