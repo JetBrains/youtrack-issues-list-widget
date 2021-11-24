@@ -216,6 +216,7 @@ class IssueLine extends React.Component {
       highlighted
     } = this.state;
     const {homeUrl} = this.props;
+    const normalizedHomeUrl = homeUrl.charAt(homeUrl.length - 1) === '/' ? homeUrl : `${homeUrl}/`;
 
     const makeHighlighted = flag =>
       () => this.setState({highlighted: flag});
@@ -262,7 +263,7 @@ class IssueLine extends React.Component {
             className={
               getIssueLinkClassName('issues-list-widget__issue-id')
             }
-            href={`${homeUrl}/issue/${issue.idReadable}`}
+            href={`${normalizedHomeUrl}issue/${issue.idReadable}`}
             target="_blank"
           >
             {issue.idReadable}
@@ -272,7 +273,7 @@ class IssueLine extends React.Component {
             className={
               getIssueLinkClassName('issues-list-widget__issue-summary')
             }
-            href={`${homeUrl}/issue/${issue.idReadable}`}
+            href={`${normalizedHomeUrl}issue/${issue.idReadable}`}
             target="_blank"
           >
             {issue.summary}

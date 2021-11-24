@@ -26,7 +26,7 @@ class IssuesListWidget extends React.Component {
   };
 
   static getIssueListLink = (homeUrl, context, search) => {
-    let link = `${homeUrl}/`;
+    let link = homeUrl.charAt(homeUrl.length - 1) === '/' ? homeUrl : `${homeUrl}/`;
     if (context && context.shortName) {
       link += `issues/${context.shortName.toLowerCase()}`;
     } else if (context && context.$type) {
@@ -50,6 +50,11 @@ class IssuesListWidget extends React.Component {
 
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
+      if (dashboardApi.loadServices) {
+        return (await dashboardApi.loadServices('YouTrack'))
+          .filter(it => predefinedYouTrack ? it.id === predefinedYouTrack.id : true)[0];
+      }
+
       try {
         return await ServiceResources.getYouTrackService(
           dashboardApi, predefinedYouTrack && predefinedYouTrack.id
