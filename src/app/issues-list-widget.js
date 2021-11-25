@@ -25,7 +25,7 @@ class IssuesListWidget extends React.Component {
     return String.fromCharCode(unicodeSuperscriptDigits[Number(digitSymbol)]);
   };
 
-  static getIssueListLink = (homeUrl, context, search) => {
+  static getIssueListLink = (homeUrl, context, search) => { // eslint-disable-line complexity
     let link = homeUrl.charAt(homeUrl.length - 1) === '/' ? homeUrl : `${homeUrl}/`;
     if (context && context.shortName) {
       link += `issues/${context.shortName.toLowerCase()}`;
@@ -51,8 +51,10 @@ class IssuesListWidget extends React.Component {
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
       if (dashboardApi.loadServices) {
-        return (await dashboardApi.loadServices('YouTrack'))
-          .filter(it => predefinedYouTrack ? it.id === predefinedYouTrack.id : true)[0];
+        return (await dashboardApi.loadServices('YouTrack')).
+          filter(
+            it => (predefinedYouTrack ? it.id === predefinedYouTrack.id : true)
+          )[0];
       }
 
       try {
