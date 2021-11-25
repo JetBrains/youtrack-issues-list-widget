@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2021-09-03 12:54\n"
+"PO-Revision-Date: 2021-11-25 13:30\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "Editar pesquisa"
 msgid "Everything"
 msgstr "Tudo"
 
-#: src/app/issues-list-widget.js:65
+#: src/app/issues-list-widget.js:72
 msgid "Issues List"
 msgstr "Lista de Issues"
 

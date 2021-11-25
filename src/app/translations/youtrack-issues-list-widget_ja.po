@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2021-09-03 12:53\n"
+"PO-Revision-Date: 2021-11-25 13:29\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "検索クエリの編集"
 msgid "Everything"
 msgstr "すべて"
 
-#: src/app/issues-list-widget.js:65
+#: src/app/issues-list-widget.js:72
 msgid "Issues List"
 msgstr "課題リスト"
 

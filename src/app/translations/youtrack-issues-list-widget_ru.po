@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2021-09-03 12:54\n"
+"PO-Revision-Date: 2021-11-25 13:30\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "Редактировать поисковый запрос"
 msgid "Everything"
 msgstr "Все"
 
-#: src/app/issues-list-widget.js:65
+#: src/app/issues-list-widget.js:72
 msgid "Issues List"
 msgstr "Список задач"
 
@@ -100,7 +100,7 @@ msgstr "воскресенье|понедельник|вторник|среда|
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "вск|пнд|втр|срд|чтв|птн|сбт"
+msgstr "вс|пн|вт|ср|чт|пт|сб"
 
 #: src/app/issues-list-edit-form.js:325
 msgid "Tags"

@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 33626\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2021-09-03 12:55\n"
+"PO-Revision-Date: 2021-11-25 13:30\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "crwdns894672:0crwdne894672:0"
 msgid "Everything"
 msgstr "crwdns894673:0crwdne894673:0"
 
-#: src/app/issues-list-widget.js:65
+#: src/app/issues-list-widget.js:72
 msgid "Issues List"
 msgstr "crwdns1448748:0crwdne1448748:0"
 
