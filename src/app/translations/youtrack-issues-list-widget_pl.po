@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2022-02-16 19:23\n"
+"PO-Revision-Date: 2022-04-18 22:06\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -45,10 +45,10 @@ msgstr "Sty|Lut|Mar|Kwi|Maj|Cze|Lip|Sie|Wrz|Paź|Lis|Gru"
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Załaduj jeszcze 1 zgłoszenie"
+msgstr[1] "Załaduj jeszcze {{$count}} zgłoszeń"
+msgstr[2] "Załaduj jeszcze {{$count}} zgłoszeń"
+msgstr[3] "Załaduj jeszcze {{$count}} zgłoszeń"
 
 #: src/app/content.js:41
 msgid "No issues found"
