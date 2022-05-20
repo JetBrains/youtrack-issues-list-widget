@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass",
-    "build": "webpack -p --devtool sourcemap",
+    "build": "webpack -p",
     "test": "karma start",
     "lint": "eslint . --quiet=true && npm run stylelint",
     "stylelint": "stylelint --ignore-path .gitignore **/*.scss",
