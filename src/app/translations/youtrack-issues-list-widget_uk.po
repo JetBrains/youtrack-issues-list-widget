@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2022-05-17 00:25\n"
+"PO-Revision-Date: 2022-05-20 12:22\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/app/content.js:50
 msgid "Edit search query"
@@ -76,7 +76,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #: src/app/issues-list-edit-form.js:331
 msgid "Saved searches"
