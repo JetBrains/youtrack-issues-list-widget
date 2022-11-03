@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2022-07-04 16:14\n"
+"PO-Revision-Date: 2022-10-17 16:25\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -23,7 +23,7 @@ msgstr "Скасувати"
 
 #: src/app/content.js:50
 msgid "Edit search query"
-msgstr "Змінити пошуковий запит"
+msgstr "Редагувати пошуковий запит"
 
 #: src/app/issues-list-edit-form.js:300
 #: src/app/issues-list-edit-form.js:35
@@ -32,7 +32,7 @@ msgstr "Усе"
 
 #: src/app/issues-list-widget.js:72
 msgid "Issues List"
-msgstr "Перелік задач"
+msgstr "Список завдань"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -45,18 +45,18 @@ msgstr "Січ|Лют|Бер|Кві|Тра|Чер|Лип|Сер|Вер|Жов|Л
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] "Завантажити ще {{$count}} задачу"
-msgstr[1] "Завантажити ще {{$count}} задачі"
-msgstr[2] "Завантажити ще {{$count}} задач"
-msgstr[3] "Завантажити ще {{$count}} задач"
+msgstr[0] "Завантажити ще {{$count}} завдання"
+msgstr[1] "Завантажити ще {{$count}} завдання"
+msgstr[2] "Завантажити ще {{$count}} завдань"
+msgstr[3] "Завантажити ще {{$count}} завдання"
 
 #: src/app/content.js:41
 msgid "No issues found"
-msgstr "Задач не знайдено"
+msgstr "Завдань не знайдено"
 
 #: src/app/issues-list-edit-form.js:226
 msgid "No projects"
-msgstr "Проєкти відсутні"
+msgstr "Немає проєктів"
 
 #: src/app/issues-list-edit-form.js:228
 msgid "No saved searches"
@@ -64,11 +64,11 @@ msgstr "Немає збережених пошуків"
 
 #: src/app/issues-list-edit-form.js:227
 msgid "No tags"
-msgstr "Міток немає"
+msgstr "Немає міток"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "Ой! Щось пішло не так..."
+msgstr "Отакої! Щось пішло не так…"
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
@@ -116,15 +116,15 @@ msgstr "Віджет оновлюється щохвилини"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "Віджет оновлюється кожні {{minutesCount}} хвилин"
+msgstr "Віджет оновлюється кожні {{minutesCount}} хв"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "am|pm"
+msgstr "дп|пп"
 
 #: src/app/issues-list-widget.js:49
 msgid "issues"
-msgstr "задачі"
+msgstr "завдання"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
