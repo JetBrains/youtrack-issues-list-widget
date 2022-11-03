@@ -55,7 +55,7 @@ export async function loadPinnedIssueFolders(fetchYouTrack, loadAll) {
 }
 
 export async function loadDateFormats(fetchYouTrack) {
-  const generalUserProfile = await fetchYouTrack(`api/admin/users/me/profiles/general?fields=${DATE_PRESENTATION_SETTINGS}`);
+  const generalUserProfile = await fetchYouTrack(`api/users/me/profiles/general?fields=${DATE_PRESENTATION_SETTINGS}`);
   const dateFormats =
     (generalUserProfile && generalUserProfile.dateFieldFormat) || {};
   return {
