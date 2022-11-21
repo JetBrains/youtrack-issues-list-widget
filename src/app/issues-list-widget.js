@@ -286,6 +286,9 @@ class IssuesListWidget extends React.Component {
   );
 
   loadIssues = async (search, context) => {
+    if (document.hidden) {
+      return;
+    }
     try {
       await this.loadIssuesUnsafe(search, context);
     } catch (error) {
