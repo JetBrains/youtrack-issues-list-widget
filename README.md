@@ -1,5 +1,13 @@
 # YouTrack Issues List Widget
 
+[![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
+[YouTrack](https://www.jetbrains.com/youtrack/) dashboard widget, which displays a list of YouTrack issues that match a search query.
+
+Widget's [page](https://plugins.jetbrains.com/plugin/10430-issues-list) on JetBrains Marketplace
+
+[Code of Conduct](https://github.com/JetBrains?#code-of-conduct)
+
 ## Developing a Hub widget
 The following commands are available:
 
