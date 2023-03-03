@@ -146,7 +146,6 @@ class IssuesListWidget extends React.Component {
   };
 
   initializeNewWidget(youTrackService) {
-    debugger
     if (youTrackService && youTrackService.id) {
       this.setState({
         isConfiguring: true,
