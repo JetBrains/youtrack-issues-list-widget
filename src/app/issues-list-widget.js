@@ -100,7 +100,8 @@ class IssuesListWidget extends React.Component {
 
     this.state = {
       isConfiguring: false,
-      isLoading: true
+      isLoading: true,
+      refreshPeriod: IssuesListWidget.COUNTER_POLLING_PERIOD_SEC
     };
     this.missedUpdate = false;
 
@@ -145,6 +146,7 @@ class IssuesListWidget extends React.Component {
   };
 
   initializeNewWidget(youTrackService) {
+    debugger
     if (youTrackService && youTrackService.id) {
       this.setState({
         isConfiguring: true,
