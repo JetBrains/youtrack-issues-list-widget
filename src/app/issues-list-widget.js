@@ -102,6 +102,7 @@ class IssuesListWidget extends React.Component {
       isConfiguring: false,
       isLoading: true
     };
+    this.missedUpdate = false;
 
     registerWidgetApi({
       onConfigure: () => this.setState({
@@ -121,7 +122,13 @@ class IssuesListWidget extends React.Component {
     this.initialize(this.props.dashboardApi);
   }
 
+  componentWillUnmount = () => {
+    document.removeEventListener('visibilitychange', this.onVisibilityChange);
+  }
+
   initialize = async dashboardApi => {
+    document.addEventListener('visibilitychange', this.onVisibilityChange);
+
     this.setState({isLoading: true});
     await this.props.configWrapper.init();
 
@@ -287,14 +294,22 @@ class IssuesListWidget extends React.Component {
 
   loadIssues = async (search, context) => {
     if (document.hidden) {
+      this.missedUpdate = true;
       return;
     }
+    this.missedUpdate = false;
     try {
       await this.loadIssuesUnsafe(search, context);
     } catch (error) {
       this.setState({isLoadDataError: true});
     }
   };
+
+  onVisibilityChange = () => {
+    if (!document.hidden && this.missedUpdate) {
+      this.loadIssues();
+    }
+  }
 
   loadIssuesUnsafe = async (search, context) => {
     const currentSearch = search || this.state.search;
