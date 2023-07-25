@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2023-02-21 23:49\n"
+"PO-Revision-Date: 2023-07-06 23:48\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -122,7 +122,7 @@ msgstr "am|pm"
 
 #: src/app/issues-list-widget.js:49
 msgid "issues"
-msgstr "ticket"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"

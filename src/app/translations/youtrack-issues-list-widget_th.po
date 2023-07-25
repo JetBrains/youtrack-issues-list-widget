@@ -3,128 +3,127 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: youtrack-custom-localization\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: youtrack-custom-localization\n"
 "X-Crowdin-Project-ID: 309400\n"
-"X-Crowdin-Language: hu\n"
+"X-Crowdin-Language: th\n"
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
 "X-Crowdin-File-ID: 241498\n"
-"Language-Team: Hungarian\n"
-"Language: hu_HU\n"
-"PO-Revision-Date: 2023-06-30 23:49\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"PO-Revision-Date: 2023-05-24 23:49\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
-msgstr "Nem tölthető be információ a szolgáltatásból"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr ""
 
 #: src/app/content.js:50
 msgid "Edit search query"
-msgstr "Szerkessze meg a keresési paramétereket"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:300
 #: src/app/issues-list-edit-form.js:35
 msgid "Everything"
-msgstr "Minden"
+msgstr ""
 
 #: src/app/issues-list-widget.js:72
 msgid "Issues List"
-msgstr "Problémák listája"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "Január|Február|Március|Április|Május|Június|Július|Augusztus|Szeptember|Október|November|December"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "Jan|Febr|Már|Ápr|Máj|Jún|Júl|Aug|Szept|Okt|Nov|Dec"
+msgstr ""
 
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] "Még 1 hibajegy betöltése"
-msgstr[1] "További {{$count}} hibajegy betöltése"
+msgstr[0] ""
 
 #: src/app/content.js:41
 msgid "No issues found"
-msgstr "Nincs találat"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:226
 msgid "No projects"
-msgstr "Nincsenek projektek"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:228
 msgid "No saved searches"
-msgstr "Nincsenek mentett keresések"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:227
 msgid "No tags"
-msgstr "Nincs címke"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "Hoppá, valami hiba történt..."
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
-msgstr "Projektek"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
-msgstr "Mentés"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:331
 msgid "Saved searches"
-msgstr "Mentett keresések"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:398
 msgid "Select YouTrack"
-msgstr "YouTrack kiválasztása"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
-msgstr "A kiválasztott YouTrace szolgáltatás nem elérhető"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:384
 msgid "Set optional title"
-msgstr "Választható cím beállítása"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "Vasárnap|Hétfő|Kedd|Szerda|Csütörtök|Péntek|Szombat"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "Vas|Hét|Ked|Sze|Csü|Pén|Szo"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:325
 msgid "Tags"
-msgstr "Címkék"
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:306
 msgid "Type search query"
-msgstr "Írja be a keresési paramétereket"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "A widget percenként frissül"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "A widget {{minutesCount}} percenként frissül"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "am|pm"
+msgstr ""
 
 #: src/app/issues-list-widget.js:49
 msgid "issues"
-msgstr "hibajegyek"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr "{{minutesCount}} perc"
+msgstr ""
 

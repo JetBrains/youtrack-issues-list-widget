@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2023-03-02 23:47\n"
+"PO-Revision-Date: 2023-05-16 00:10\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -32,7 +32,7 @@ msgstr "הכל"
 
 #: src/app/issues-list-widget.js:72
 msgid "Issues List"
-msgstr ""
+msgstr "רשימת בעיות"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -40,19 +40,19 @@ msgstr "ינואר|פברואר|מרץ|אפריל|מאי|יוני|יולי|או�
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "ינו'|פבר'|מרץ|אפר'|מאי|יונ'|יול'|אוג'|ספט'|אוק'|נוב'|דצמ'"
 
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "לטעון בעיה אחת נוספת"
+msgstr[1] "לטעון {{$count}} בעיות נוספות"
+msgstr[2] "לטעון {{$count}} בעיות נוספות"
+msgstr[3] "לטעון {{$count}} בעיות נוספות"
 
 #: src/app/content.js:41
 msgid "No issues found"
-msgstr ""
+msgstr "לא נמצאו בעיות"
 
 #: src/app/issues-list-edit-form.js:226
 msgid "No projects"
@@ -68,7 +68,7 @@ msgstr "ללא תגיות"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "אופס! משהו השתבש..."
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
@@ -84,15 +84,15 @@ msgstr "חיפושים שמורים"
 
 #: src/app/issues-list-edit-form.js:398
 msgid "Select YouTrack"
-msgstr ""
+msgstr "בחירה ב-YouTrack"
 
 #: src/app/issues-list-edit-form.js:100
 msgid "Selected YouTrack service is not available"
-msgstr ""
+msgstr "שירות YouTrack שנבחר אינו זמין"
 
 #: src/app/issues-list-edit-form.js:384
 msgid "Set optional title"
-msgstr ""
+msgstr "הגדרת כותרת אופציונלית"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -112,15 +112,15 @@ msgstr "הזן שאילתת חיפוש"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "הווידג'ט מתרענן כל דקה"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "הווידג'ט מתרענן כל {{minutesCount}} דקות"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr ""
+msgstr "לפנ\"צ|אחה\"צ"
 
 #: src/app/issues-list-widget.js:49
 msgid "issues"
