@@ -14,6 +14,7 @@ ringUiWebpackConfig.loaders.svgSpriteLoader.include.push(
   require('@jetbrains/icons')
 );
 
+
 const webpackConfig = () => ({
   entry: `${componentsPath}/app/app.js`,
   resolve: {
