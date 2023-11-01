@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2023-07-28 16:35\n"
+"PO-Revision-Date: 2023-11-01 10:57\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "Редагувати пошуковий запит"
 msgid "Everything"
 msgstr "Усе"
 
-#: src/app/issues-list-widget.js:72
+#: src/app/issues-list-widget.js:73
 msgid "Issues List"
 msgstr "Список завдань"
 
@@ -122,7 +122,7 @@ msgstr "Віджет оновлюється кожні {{minutesCount}} хв"
 msgid "am|pm"
 msgstr "дп|пп"
 
-#: src/app/issues-list-widget.js:49
+#: src/app/issues-list-widget.js:50
 msgid "issues"
 msgstr "завдання"
 

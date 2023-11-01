@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2023-07-28 16:35\n"
+"PO-Revision-Date: 2023-11-01 10:57\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "Arama sorgusunu düzenle"
 msgid "Everything"
 msgstr "Her şey"
 
-#: src/app/issues-list-widget.js:72
+#: src/app/issues-list-widget.js:73
 msgid "Issues List"
 msgstr "Sorun Listesi"
 
@@ -120,7 +120,7 @@ msgstr "Widget {{minutesCount}} dakikada bir yenilenmekte"
 msgid "am|pm"
 msgstr "öö|ös"
 
-#: src/app/issues-list-widget.js:49
+#: src/app/issues-list-widget.js:50
 msgid "issues"
 msgstr "sorunlar"
 

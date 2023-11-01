@@ -3,19 +3,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: youtrack-custom-localization\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: youtrack-custom-localization\n"
 "X-Crowdin-Project-ID: 309400\n"
-"X-Crowdin-Language: uz\n"
+"X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /widgets/youtrack-issues-list-widget/default.pot\n"
 "X-Crowdin-File-ID: 241498\n"
-"Language-Team: Uzbek\n"
-"Language: uz_UZ\n"
-"PO-Revision-Date: 2023-11-01 10:57\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2023-11-01 10:58\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
-msgstr "Xizmatdan maʼlumotni yuklab boʻlmadi"
+msgstr "Không thể tải thông tin từ dịch vụ"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: src/app/content.js:50
 msgid "Edit search query"
-msgstr ""
+msgstr "Chỉnh sửa truy vấn tìm kiếm"
 
 #: src/app/issues-list-edit-form.js:300
 #: src/app/issues-list-edit-form.js:35
@@ -45,8 +45,7 @@ msgstr ""
 #: src/app/content.js:124
 msgid "Load 1 more issue"
 msgid_plural "Load {{$count}} more issues"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tải thêm {{$count}} Công việc khác"
 
 #: src/app/content.js:41
 msgid "No issues found"
@@ -66,7 +65,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "Voy! Nimadir noto'g'ri bajarildi..."
+msgstr ""
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
@@ -110,21 +109,21 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "Vidjet har daqiqada yangilanadi"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "Vidjet har bir {{minutesCount}} daqiqa yangilaydi"
+msgstr "Widget làm mới mỗi {{minutesCount}} phút"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "am|pm"
+msgstr ""
 
 #: src/app/issues-list-widget.js:50
 msgid "issues"
-msgstr "muammolar"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr "{{minutesCount}} daqiqa"
+msgstr "{{minutesCount}} phút"
 

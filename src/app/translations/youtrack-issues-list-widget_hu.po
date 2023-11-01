@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2023-07-28 16:34\n"
+"PO-Revision-Date: 2023-11-01 10:55\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "Szerkessze meg a keresési paramétereket"
 msgid "Everything"
 msgstr "Minden"
 
-#: src/app/issues-list-widget.js:72
+#: src/app/issues-list-widget.js:73
 msgid "Issues List"
 msgstr "Problémák listája"
 
@@ -120,7 +120,7 @@ msgstr "A widget {{minutesCount}} percenként frissül"
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/issues-list-widget.js:49
+#: src/app/issues-list-widget.js:50
 msgid "issues"
 msgstr "hibajegyek"
 

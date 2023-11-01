@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2023-07-28 16:34\n"
+"PO-Revision-Date: 2023-11-01 10:55\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "Modifica la query di ricerca"
 msgid "Everything"
 msgstr "Qualsiasi"
 
-#: src/app/issues-list-widget.js:72
+#: src/app/issues-list-widget.js:73
 msgid "Issues List"
 msgstr "Elenco ticket"
 
@@ -120,9 +120,9 @@ msgstr "Il widget si aggiorna ogni {{minutesCount}} minuti"
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/issues-list-widget.js:49
+#: src/app/issues-list-widget.js:50
 msgid "issues"
-msgstr ""
+msgstr "ticket"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"

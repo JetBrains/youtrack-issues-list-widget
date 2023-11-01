@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Zulu\n"
 "Language: zu_ZA\n"
-"PO-Revision-Date: 2023-07-28 16:35\n"
+"PO-Revision-Date: 2023-11-01 10:58\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -30,7 +30,7 @@ msgstr "crwdns10855716:0crwdne10855716:0"
 msgid "Everything"
 msgstr "crwdns10855718:0crwdne10855718:0"
 
-#: src/app/issues-list-widget.js:72
+#: src/app/issues-list-widget.js:73
 msgid "Issues List"
 msgstr "crwdns10855720:0crwdne10855720:0"
 
@@ -120,7 +120,7 @@ msgstr "crwdns10855760:0{{minutesCount}}crwdne10855760:0"
 msgid "am|pm"
 msgstr "crwdns10855762:0crwdne10855762:0"
 
-#: src/app/issues-list-widget.js:49
+#: src/app/issues-list-widget.js:50
 msgid "issues"
 msgstr "crwdns10855764:0crwdne10855764:0"
 
