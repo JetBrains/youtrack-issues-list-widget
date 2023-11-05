@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2023-11-05 02:55\n"
+"PO-Revision-Date: 2023-11-05 03:27\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
