@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 241498\n"
 "Language-Team: Afrikaans\n"
 "Language: af_ZA\n"
-"PO-Revision-Date: 2023-11-05 05:30\n"
+"PO-Revision-Date: 2024-02-09 20:51\n"
 
 #: src/app/content.js:62
 msgid "Can't load information from service"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: src/app/issues-list-edit-form.js:319
 msgid "Projects"
-msgstr ""
+msgstr "Projek"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
