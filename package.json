@@ -59,7 +59,7 @@
     "chai-spies": "1.0.0",
     "cheerio": "=1.0.0-rc.3",
     "copy-webpack-plugin": "4.6.0",
-    "electron": "3.0.10",
+    "electron": "22.3.25",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
     "eslint": "^5.12.1",
