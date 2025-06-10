@@ -1,6 +1,6 @@
-# YouTrack Issues List Widget
+# YouTrack Issues List Widget [![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
-[![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+## Note: this widget is migrated into a [YouTrack App](https://github.com/JetBrains/youtrack-apps/tree/main/packages/issue-dashboard-widgets/widgets/youtrack-issues-list)
 
 [YouTrack](https://www.jetbrains.com/youtrack/) dashboard widget, which displays a list of YouTrack issues that match a search query.
 
